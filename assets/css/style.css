@@ -1788,7 +1788,7 @@ body.modal{
 .tokyo_tm_settings{
 	position: fixed;
 	z-index: 10;
-	top: 0%;
+	top: 10%;
 	right: -200px;
 	width: 200px;
 	background-color: rgba(0,0,0,1.00);
