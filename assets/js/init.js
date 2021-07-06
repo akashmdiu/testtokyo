@@ -697,11 +697,15 @@ function tokyo_tm_owl_carousel() {
 		if (themeColor === "dark") {
 			$('.tokyo_tm_settings .tk-theme-color li a').removeClass('active');
 			$('.tokyo_tm_settings .tk-theme-color li a.black').addClass('active');
+			$('.logo img').attr('src', '/assets/img/logo/dark.png');
 		}
 		else {
 			$('.tokyo_tm_settings .tk-theme-color li a').removeClass('active');
 			$('.tokyo_tm_settings .tk-theme-color li a.white').addClass('active');
+			$('.logo img').attr('src', '/assets/img/logo/logo.png');
 		}
+
+
 	}
 
 	//for theme radius
