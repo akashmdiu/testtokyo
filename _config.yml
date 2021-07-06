@@ -1,0 +1,39 @@
+####################################################
+#
+# Welcome to NewsFeed Jekyll Template
+#
+# Product Link : https://themeix.com/product/NewsFeed-jekyll-template/
+# Version : v1.0.0
+#
+####################################################
+
+# Site settings
+title: "Tokyo - personal portfolio jekyll theme"
+email: "themeix@gmail.com"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: " " # the base hostname & protocol for your site, e.g. http://example.com
+logo: /assets/images/header-brand.png
+description: "Tokyo is a responsive Jekyll template for your portfolio website"
+top_letest_news: true
+keywords: "jekyll, minimal jekyll, jekyll theme, responsive jekyll, seo friendly blog, super fast blog, responsive"
+mailchimp: "https://themeix.us16.list-manage.com/subscribe/post?u=307862c135e4548eecf86f389&amp;id=4784863884"
+facebook: https://facebook.com/themeix
+instagram: https://instagram.com/themeix
+twitter: https://twitter.com/themeix_com
+pinterest: https://pinterest.com/themeix
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+collections:
+  authors:
+    output: true
+    permalink: /author/:path/
+
+feed:
+  collections:
+    posts:
+      path: "/index.xml"
