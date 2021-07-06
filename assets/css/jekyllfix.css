@@ -159,3 +159,11 @@
 .tk-theme-radius a.tk-rounded {
   border-radius: 6px!important;
 }
+
+.logo-dark, .logo-light{
+  display: none;
+}
+
+body.dark .logo-light, body.white .logo-dark{
+  display: block;
+}

@@ -701,7 +701,6 @@ function tokyo_tm_owl_carousel() {
 		else {
 			$('.tokyo_tm_settings .tk-theme-color li a').removeClass('active');
 			$('.tokyo_tm_settings .tk-theme-color li a.white').addClass('active');
-			$('.logo img').attr('src').replace('dark', 'logo');
 		}
 
 
