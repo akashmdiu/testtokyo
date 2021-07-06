@@ -671,17 +671,22 @@ function tokyo_tm_owl_carousel() {
 		if (typeof (Storage) !== "undefined") {
 			localStorage.setItem('theme_color', 'dark');
 		}
+
 		$('body').addClass('dark');
+		$('body').removeClass('white');
 		$(this).addClass("active");
 		$('.tk-theme-color .white').removeClass('active');
 	});
+
 
 	$('.tk-theme-color .white').on('click', function (e) {
 		e.preventDefault();
 		if (typeof (Storage) !== "undefined") {
 			localStorage.setItem('theme_color', 'white');
 		}
+
 		$('body').removeClass('dark');
+		$('body').addClass('white');
 		$(this).addClass("active");
 		$('.tk-theme-color .black').removeClass('active');
 	});
@@ -695,12 +700,14 @@ function tokyo_tm_owl_carousel() {
 		let themeColor = localStorage.getItem('theme_color');
 		$('body').toggleClass(themeColor);
 		if (themeColor === "dark") {
+			
 			$('.tokyo_tm_settings .tk-theme-color li a').removeClass('active');
 			$('.tokyo_tm_settings .tk-theme-color li a.black').addClass('active');
 		}
 		else {
 			$('.tokyo_tm_settings .tk-theme-color li a').removeClass('active');
 			$('.tokyo_tm_settings .tk-theme-color li a.white').addClass('active');
+			$('body').addClass('white');
 		}
 
 
