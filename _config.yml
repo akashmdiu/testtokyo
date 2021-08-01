@@ -9,8 +9,8 @@
 # Site settings
 title: "Shane - personal portfolio jekyll theme"
 email: "themeix@gmail.com"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/testtokyo" # the subpath of your site, e.g. /blog
+url: "https://akashmdiu.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 logo: /assets/images/header-brand.png
 description: "Shane is a responsive Jekyll template for your portfolio website"
 top_letest_news: true
