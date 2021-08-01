@@ -1,77 +1,74 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-
-<head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<meta name="description" content="Name of your web site">
-<meta name="author" content="Marketify">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-<title>Tokyo | Home</title>
-
-<!-- STYLES -->
-<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" type="text/css" href="css/plugins.css" />
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<link rel="stylesheet" type="text/css" href="css/dark.css" />
-<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
-<!-- /STYLES -->
-
-</head>
-
-<body> 
-	
-	<!-- PRELOADER -->
-	<div id="preloader">
-		<div class="loader_line"></div>
-	</div>
-	<!-- /PRELOADER -->
+---
+layout: default
+permalink: /intro
+--- 
 	
 <!-- WRAPPER ALL -->
-<div class="tokyo_tm_all_wrap" data-magic-cursor=""> <!-- If you want disable magic cursor add value "hide" -->	
-	
-	<div class="tokyo_tm_intro">
-	
-		<div class="tokyo_tm_intro_fixed_price">
-			<span class="anim"></span>
-			<span class="anim"></span>
-			<span class="anim"></span> 
-			<a href="https://themeforest.net/item/tokyo-personal-portfolio-template/31647361" target="_blank" class="pricing-info anim">-40%</a>
-		</div>
-	
-		<div class="short_info">
-			<img src="img/logo/dark.png" alt="" />
-			<h3>Personal Portfolio Template</h3>
-		</div>
-		<span class="intro_line"></span>
-		<span class="intro_line_2"></span>
-		<span class="intro_line_3"></span>
-		<div class="demos">
-			<div class="left">
-				<div class="desc">
-					<img src="img/intro/light.png" alt="" />
-					<h3 class="title">Light Demo</h3>
+<div class="shane_tm_all_wrap" data-magic-cursor="" data-color="black">
+
+	<div class="shane_tm_intro">
+		<div class="hero">
+			<div class="content">
+				<img src="{{'/assets/img/intro/logo.png' | relative_url}}" alt="{{site.title}}" />
+				<p>Personal Portfolio Template</p>
+				<div class="purchase_button">
+					<a href="https://themeforest.net/item/shane-vcard-template/28114907" target="_blank">Buy Now</a>
 				</div>
-				<a class="intro_link" href="index.html" target="_blank"></a>
 			</div>
-			<div class="right">
-				<div class="desc">
-					<img src="img/intro/dark.png" alt="" />
-					<h3 class="title">Dark Demo</h3>
+		</div>
+		<div class="intro_title">
+			<h3>Ready Demos</h3>
+		</div>
+		<div class="demo_list">
+			<div class="container">
+				<div class="inner">
+					<ul>
+						<li>
+							<div class="list_inner">
+								<img src="{{'/assets/img/intro/1.jpg' | relative_url}}" alt="" />
+								<h3>Demo #1</h3>
+								<a class="shane_tm_full_link" href="{{'/' | relative_url}}" target="_blank"></a>
+							</div>
+						</li>
+						<li>
+							<div class="list_inner">
+								<img src="{{'/assets/img/intro/2.jpg' | relative_url}}" alt="" />
+								<h3>Demo #2</h3>
+								<a class="shane_tm_full_link" href="{{'/home-02' | relative_url}}" target="_blank"></a>
+							</div>
+						</li>
+						<li>
+							<div class="list_inner">
+								<img src="{{'/assets/img/intro/3.jpg' | relative_url}}" alt="" />
+								<h3>Demo #3</h3>
+								<a class="shane_tm_full_link" href="{{'/home-03' | relative_url}}" target="_blank"></a>
+							</div>
+						</li>
+						<li>
+							<div class="list_inner">
+								<img src="{{'/assets/img/intro/4.jpg' | relative_url}}" alt="" />
+								<h3>Demo #4 (Scrolling Animation)</h3>
+								<a class="shane_tm_full_link" href="{{'/home-04' | relative_url}}" target="_blank"></a>
+							</div>
+						</li>
+					</ul>
 				</div>
-				<a class="intro_link" href="index-dark.html" target="_blank"></a>
 			</div>
 		</div>
 	</div>
 		
+	<!-- COPYRIGHT -->
+	<div class="shane_tm_section">
+		<div class="shane_tm_copyright">
+			<div class="container">
+				<div class="inner">
+					<p>&copy; 2021 by <a href="https://themeforest.net/user/marketify" target="_blank">marketify</a>. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /COPYRIGHT -->
+	
 	<!-- CURSOR -->
 	<div class="mouse-cursor cursor-outer"></div>
     <div class="mouse-cursor cursor-inner"></div>
@@ -79,14 +76,4 @@
 	
 </div>
 <!-- / WRAPPER ALL -->
-	
-<!-- SCRIPTS -->
-<script src="js/jquery.js"></script>
-<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
-<script src="js/plugins.js"></script>
-<script src="js/init.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&callback=initMap"></script>
-<!-- /SCRIPTS -->
 
-</body>
-</html>

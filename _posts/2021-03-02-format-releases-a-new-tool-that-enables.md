@@ -42,7 +42,7 @@ excerpt: The and room. Know and nation question would the to copy. And leather a
 <h2 id="basic-usage">Basic usage<a href="#basic-usage" class="header-link">#</a></h2>
 <p>The Jekyll gem makes a <code class=" highlighter-rouge language-plaintext">jekyll</code> executable available to you
   in your Terminal window. You can use this command in a number of ways:</p>
-<h2 id="directory-structure">Directory structure<a href="#directory-structure" class="header-link">#</a></h2>
+<h2 id="directory-structure-1">Directory structure<a href="#directory-structure-1" class="header-link">#</a></h2>
 <p>Jekyll is, at its core, a text transformation engine. The concept behind the system is this: you give it text written
   in your favorite markup language, be that Markdown, Textile, or just plain HTML, and it churns that through a layout
   or a series of layout files. Throughout that process you can tweak how you want the site URLs to look, what data
@@ -93,7 +93,7 @@ excerpt: The and room. Know and nation question would the to copy. And leather a
 
 ReactDOM<span class="token punctuation">.</span><span class="token function">render</span> <span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		  </code>
   </pre>
-<h2 id="front-matter">Front matter<a href="#front-matter" class="header-link">#</a></h2>
+<h2 id="front-matter-1">Front matter<a href="#front-matter-1" class="header-link">#</a></h2>
 <p>The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be
   processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form
   of valid YAML set between triple-dashed lines. Here is a basic example:</p>

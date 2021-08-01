@@ -1,0 +1,38 @@
+{% assign testimonial_data = site.data.site_data[page.testimonial_data] %}
+
+<!-- TESTIMONIALS -->
+<div class="shane_tm_section">
+    <div class="shane_tm_testimonials">
+        <div class="container">
+            <div class="testimonials_inner">
+                <div class="left">
+                    <div class="shane_tm_title">
+                        <span>{{testimonial_data.shane_section}}</span>
+                        <h3>{{testimonial_data.title}}</h3>
+                    </div>
+                </div>
+                <div class="right">
+                    <ul class="owl-carousel">
+                        {% for testimonial in testimonial_data.carousel %}
+                            <li class="item">
+                                <div class="texts">
+                                    <p>{{testimonial.testimonial}}</p>
+                                    <div class="author">
+                                        <div class="image">
+                                            <div class="main" data-img-url="{{testimonial.img_src | relative_url}}"></div>
+                                        </div>
+                                        <div class="short">
+                                            <h3 class="author"><span>{{testimonial.name}}</span></h3>
+                                            <h3 class="job"><span>{{testimonial.designation}}</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- /TESTIMONIALS -->

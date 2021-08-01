@@ -1,0 +1,100 @@
+{% assign contact_data = site.data.site_data[page.contact_data] %}
+<!-- TALK -->
+<div class="shane_tm_section" id="contact">
+    <div class="shane_tm_talk">
+        <div class="shape">
+            <img class="svg" src="{{'/assets/img/svg/paper.svg' | relative_url}}" alt="" />
+        </div>
+        <div class="background" id="talk">
+            <a class="player"
+                data-property="{videoURL:'{{contact_data.bg_video_src | relative_url}}',containment:'#talk',autoPlay:true, loop:true, showControls:false, mute:true, startAt:0,opacity:1, quality:'default'}"></a>
+            <div class="overlay"></div>
+        </div>
+        <div class="talk_inner">
+            <div class="text">
+                <h3>{{contact_data.title}}</h3>
+            </div>
+            <div class="button">
+                <a href="#">{{contact_data.btn_label}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /TALK -->
+
+<!-- MODAL CONTACT -->
+<div class="shane_tm_mobalbox_contact">
+    <div class="box_inner">
+        <div class="close">
+            <a href="#"><img class="svg" src="{{'/assets/img/svg/cancel.svg' | relative_url}}" alt="" /></a>
+        </div>
+        <div class="description_wrap scrollable">
+            <div class="title">
+                <h3>{{contact_data.modal_data.form_title}}</h3>
+            </div>
+            <div class="wrapper">
+                <div class="left">
+                    <div class="fields">
+                        <form action="{{contact_data.modal_data.action_url}}" method="POST" class="contact_form" id="contact_form" autocomplete="off">
+                            <div class="returnmessage"
+                                data-success="Your message has been received, We will contact you soon."></div>
+                            <div class="empty_notice"><span>Please Fill Required Fields</span></div>
+                            <div class="first">
+                                <ul>
+                                    <li>
+                                        <input id="name" name="Name:" type="text" placeholder="{{contact_data.modal_data.placeholder_name}}">
+                                    </li>
+                                    <li>
+                                        <input id="email" name="Email:" type="email" placeholder="{{contact_data.modal_data.placeholder_email}}">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="last">
+                                <textarea id="message" name="Message:" placeholder="{{contact_data.modal_data.placeholder_message}}"></textarea>
+                            </div>
+
+                            <div class="shane_tm_button" data-position="left">
+                                <button id="send_message" class="submit-btn"type="submit">
+                                    <span>{{contact_data.modal_data.form_btn_label}}</span>
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="map_wrap">
+                        <div class="map" id="ieatmaps"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="short_info">
+                <ul>
+                    <li>
+                        <div class="list_inner">
+                            <img class="svg" src="{{'/assets/img/svg/location.svg' | relative_url}}" alt="" />
+                            <p>{{contact_data.modal_data.contact_location}}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_inner">
+                            <img class="svg" src="{{'/assets/img/svg/phone.svg' | relative_url}}" alt="" />
+                            <p><a href="#">{{contact_data.modal_data.contact_number}}</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_inner">
+                            <img class="svg" src="{{'/assets/img/svg/share.svg' | relative_url}}" alt="" />
+                            <ul class="social">
+                                {% for social in contact_data.modal_data.social_contact %}
+                                    <li><a href="{{social.url | relative_url}}"><img class="svg" src="{{'/assets/img/svg/social/' | relative_url}}{{social.name}}.svg" alt="{{social.name}}" /></a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL CONTACT -->

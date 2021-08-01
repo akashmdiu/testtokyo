@@ -1,0 +1,55 @@
+---
+layout: default
+home: 04
+permalink: /home-04
+hero_data: hero
+about_data: about
+portfolio_data: portfolio
+skills_data: skills
+video_data: video
+partners_data: partners
+testimonial_data: testimonials
+news_data: news
+contact_data: contact
+copyright_data: copyright
+---
+
+<!-- WRAPPER ALL -->
+<div class="shane_tm_all_wrap" data-magic-cursor="" data-color="black">
+
+	<!-- MAGIC CURSOR VALUES: "", hide -->
+	<!-- COLOR VALUES: blue, green, brown, pink, orange, black, white, purple, sky, cadetBlue, crimson, olive, red -->
+
+	{% include shane-theme-settings.html %}
+
+	<!-- MODALBOX NEWS -->
+	<div class="shane_tm_modalbox_news">
+		<div class="box_inner">
+			<div class="close">
+				<a href="#"><img class="svg" src="{{'/assets/img/svg/cancel.svg' | relative_url }}" alt="" /></a>
+			</div>
+			<div class="description_wrap scrollable">
+			</div>
+		</div>
+	</div>
+	<!-- /MODALBOX NEWS -->
+
+	{% include navigation.html %}
+	{% include shane_hero.html %}
+	{% include shane_about.html %}
+	{% include shane_portfolio.html %}
+	{% include shane_skills.html %}
+	{% include shane_video.html %}
+	{% include shane_partners.html %}
+	{% include shane_testimonial.html %}
+	{% include shane_news.html %}
+	{% include shane_contact.html %}
+	{% include shane_copyright.html %}
+
+	<!-- CURSOR -->
+	<div class="mouse-cursor cursor-outer"></div>
+	<div class="mouse-cursor cursor-inner"></div>
+	<!-- /CURSOR -->
+
+</div>
+<!-- / WRAPPER ALL -->

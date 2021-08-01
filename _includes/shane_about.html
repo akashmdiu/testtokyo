@@ -1,0 +1,29 @@
+{% assign about_data = site.data.site_data[page.about_data] %}
+<!-- ABOUT -->
+<div class="shane_tm_section" id="about">
+    <div class="shane_tm_about">
+        <div class="container">
+            <div class="about_inner">
+                <div class="left">
+                    <div class="image">
+                        <img src="{{'/assets/img/placeholders/1-1.jpg' | relative_url}}" alt="" />
+                        <div class="main" data-img-url="{{about_data.img_src | relative_url}}"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="shane_tm_title">
+                        <span>{{about_data.shane_section}}</span>
+                        <h3>{{about_data.title}}</h3>
+                    </div>
+                    <div class="text">
+                        <p>{{about_data.description}}</p>
+                    </div>
+                    <div class="shane_tm_button">
+                        <a class="submit-btn" href="{{about_data.resume_src | relative_url}}" download>{{about_data.download_text}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ABOUT -->

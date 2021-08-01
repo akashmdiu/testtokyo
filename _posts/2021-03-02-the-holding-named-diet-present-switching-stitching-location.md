@@ -19,7 +19,7 @@ excerpt: The and room. Know and nation question would the to copy. And leather a
   ready-to-publish static website suitable for serving with your favorite web server.</p>
 <p>If you already have a full Ruby development environment with all headers and RubyGems installed, you can create a new
   Jekyll site by doing the following:</p>
-<h2 id="how-to-install">How to install<a href="#how-to-install" class="header-link">#</a></h2>
+<h2 id="how-to-install-2">How to install<a href="#how-to-install-2" class="header-link">#</a></h2>
 <pre class=" language-javascript">		<code class=" language-javascript">
   # Install Jekyll and Bundler gems through RubyGems
   <span class="token operator">~</span> $ gem install jekyll bundler
@@ -35,14 +35,14 @@ excerpt: The and room. Know and nation question would the to copy. And leather a
   
   # Now browse to http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token punctuation">:</span><span class="token number">4000</span>
 </code>	  </pre>
-<h2 id="next-steps">Next steps<a href="#next-steps" class="header-link">#</a></h2>
+<h2 id="next-steps-2">Next steps<a href="#next-steps-2" class="header-link">#</a></h2>
 <p>Building a Jekyll site with the default theme is just the first step. The real magic happens when you start creating
   blog posts, using the front matter to control templates and layouts, and taking advantage of all the awesome
   configuration options Jekyll makes available.</p>
-<h2 id="basic-usage">Basic usage<a href="#basic-usage" class="header-link">#</a></h2>
+<h2 id="basic-usage-2">Basic usage<a href="#basic-usage-2" class="header-link">#</a></h2>
 <p>The Jekyll gem makes a <code class=" highlighter-rouge language-plaintext">jekyll</code> executable available to you
   in your Terminal window. You can use this command in a number of ways:</p>
-<h2 id="directory-structure">Directory structure<a href="#directory-structure" class="header-link">#</a></h2>
+<h2 id="directory-structure-3">Directory structure<a href="#directory-structure-3" class="header-link">#</a></h2>
 <p>Jekyll is, at its core, a text transformation engine. The concept behind the system is this: you give it text written
   in your favorite markup language, be that Markdown, Textile, or just plain HTML, and it churns that through a layout
   or a series of layout files. Throughout that process you can tweak how you want the site URLs to look, what data
@@ -93,7 +93,7 @@ excerpt: The and room. Know and nation question would the to copy. And leather a
 
 ReactDOM<span class="token punctuation">.</span><span class="token function">render</span> <span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		  </code>
   </pre>
-<h2 id="front-matter">Front matter<a href="#front-matter" class="header-link">#</a></h2>
+<h2 id="front-matter-3">Front matter<a href="#front-matter-3" class="header-link">#</a></h2>
 <p>The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be
   processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form
   of valid YAML set between triple-dashed lines. Here is a basic example:</p>
@@ -102,7 +102,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
   file and also in any layouts or includes that the page or post in question relies on.</p>
 <img src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1920&amp;h=1080&amp;fit=crop&amp;s=80308172730757a7db0434987fa985f3"
   alt="Example image">
-<h2 id="where-additional-pages-live">Where additional pages live<a href="#where-additional-pages-live"
+<h2 id="where-additional-pages-live-2">Where additional pages live<a href="#where-additional-pages-live-2"
       class="header-link">#</a></h2>
 <p>Where you put HTML or Markdown files for pages depends on how you want the pages to work. There are two main ways of
   creating pages:</p>

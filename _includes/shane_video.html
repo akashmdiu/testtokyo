@@ -1,0 +1,20 @@
+{% assign video_data = site.data.site_data[page.video_data] %}
+
+<!-- VIDEO -->
+<div class="shane_tm_section">
+    <div class="shane_tm_business_video">
+        <div class="bg">
+            <div class="image jarallax" data-speed="0" data-img-url="{{video_data.bg_img_src | relative_url}}"></div>
+            <div class="overlay"></div>
+        </div>
+        <div class="content">
+            <span class="rounded"><a class="popup-youtube"
+                    href="{{video_data.video_src | relative_url}}"></a></span>
+            <h3 class="text">{{video_data.title}}</h3>
+            <div class="shane_tm_video_button">
+                <a class="popup-youtube" href="{{video_data.video_src | relative_url}}">{{video_data.btn_label}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /VIDEO -->

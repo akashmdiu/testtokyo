@@ -1,12 +1,12 @@
-.tokyo_tm_news ul li {
+.shane_tm_news ul li {
   height: 58vh;
 }
 
-.tokyo_tm_news ul li .image img {
+.shane_tm_news ul li .image img {
   height: 245px;
 }
 
-.tokyo_tm_portfolio .portfolio_list li {
+.shane_tm_portfolio .portfolio_list li {
   height: 53vh;
 }
 
@@ -14,59 +14,108 @@
   height: 100%;
 }
 
-.tokyo_tm_portfolio .portfolio_list li .inner {
+.shane_tm_portfolio .portfolio_list li .inner {
   height: 100%;
 }
 
-.entry.tokyo_tm_portfolio_animation_wrap a {
+.entry.shane_tm_portfolio_animation_wrap a {
   display: block;
 }
 
-.tokyo_tm_settings .tk-theme-color li a, .tokyo_tm_settings .colors li a {
+.description h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.shane_tm_settings .shane-theme-color li a,
+.shane_tm_settings .colors li a {
   transition: 0.2s;
   margin: 0 5px;
 }
 
-.tokyo_tm_settings .tk-theme-color li, .tokyo_tm_settings .colors li {
+.shane_tm_settings .shane-theme-color li,
+.shane_tm_settings .colors li {
   position: relative;
 }
 
-
-.tokyo_tm_settings .tk-theme-color li a.active, .tokyo_tm_settings .colors li.active a,.tokyo_tm_settings .tk-theme-radius li a.active   {
+.shane_tm_settings .shane-theme-color li a.active,
+.shane_tm_settings .colors li.active a,
+.shane_tm_settings .shane-theme-radius li a.active {
   transform: scale(1.2);
 }
 
-
-
-.tokyo_tm_about .about_image .main, .tokyo_tm_button button, .tokyo_tm_button a, .tokyo_tm_portfolio .portfolio_list li .inner .main_image, .tokyo_tm_portfolio .portfolio_list li .inner, .tokyo_tm_news ul li .list_inner, .tokyo_tm_contact .fields ul li input, .tokyo_tm_contact .fields .last textarea, .tokyo_tm_contact .map_wrap .map, .tokyo_tm_title span, .tokyo_tm_modalbox_about .description_wrap, .tokyo_tm_modalbox_news .box_inner, .tokyo_tm_modalbox_news .description_wrap .image .main,.typofix pre, .typofix img,.tokyo_tm_portfolio_titles, .tk-rounded-radius, .tokyo_tm_modalbox_news  .tk-post-rounded-radius .description_wrap .image img, .tokyo_tm_modalbox_about .box_inner {
-  border-radius: 8px;
+.shane-radius .shane_tm_about .about_image .main,
+.shane-radius .shane_tm_button button,
+.shane-radius .shane_tm_button a,
+.shane-radius .shane_tm_portfolio .portfolio_list li .inner .main_image,
+.shane-radius .shane_tm_portfolio .portfolio_list li .inner,
+.shane-radius .shane_tm_news ul li .list_inner,
+.shane-radius .shane_tm_contact .fields ul li input,
+.shane-radius .shane_tm_contact .fields .last textarea,
+.shane-radius .shane_tm_contact .map_wrap .map,
+.shane-radius .shane_tm_title span,
+.shane-radius .shane_tm_modalbox_about .description_wrap,
+.shane-radius .shane_tm_modalbox_news .box_inner,
+.shane-radius .shane_tm_modalbox_news .description_wrap .image .main,
+.shane-radius .typofix pre,
+.shane-radius .typofix img,
+.shane-radius .shane_tm_portfolio_titles,
+.shane-radius .shane-rounded-radius,
+.shane-radius .shane_tm_modalbox_news .shane-post-rounded-radius .description_wrap .image img,
+.shane-radius .shane_tm_modalbox_about .box_inner,
+.shane-radius .shane_tm_portfolio .portfolio_list ul li .inner:hover .main,
+.shane-radius .shane_tm_modalbox_news .box_inner:before,
+.shane-radius .shane_tm_mobalbox_contact.opened .box_inner,
+.shane-radius input,
+.shane-radius textarea,
+.shane-radius .shane_tm_mobalbox_contact .short_info > ul > li .list_inner, .shane-radius .shane_tm_modalbox_news .box_inner:after {
+  border-radius: 8px !important;
   transition: 0.2s;
 }
 
-.tokyo_tm_contact .fields ul li input {
+.shane-radius .shane_tm_mobalbox_contact .box_inner:before, .shane-radius .shane_tm_mobalbox_contact .box_inner:after{
+  border-radius: 8px;
+}
+
+.shane-radius .image,
+.shane-radius .image img,
+.shane-radius .shane_tm_about .left .main,
+.shane-radius .shane_tm_video_button a,
+.shane-radius .button a,
+body.loaded.shane-radius .overlay_effect:before,
+body.loaded.shane-radius .overlay_effect:after {
+  border-radius: 8px;
+}
+
+.shane-radius .shane_tm_contact .fields ul li input {
   height: 50px;
 }
 
-.tokyo_tm_settings,.tokyo_tm_settings .icon,.tokyo_tm_news ul li .details   {
+.shane-radius .shane_tm_settings,
+.shane-radius .shane_tm_settings .icon,
+.shane-radius .shane_tm_news ul li .details {
   border-bottom-left-radius: 8px;
   transition: 0.2s;
 }
 
-.tokyo_tm_settings .icon,.tk-news-article .image  {
+.shane-radius .shane_tm_settings .icon,
+.shane-radius .shane-news-article .image {
   border-top-left-radius: 8px;
   transition: 0.2s;
 }
 
-.tk-news-article .image {
+.shane-radius .shane-news-article .image {
   border-top-right-radius: 8px;
   transition: 0.2s;
 }
 
-.tokyo_tm_news ul li .details {
+.shane-radius .shane_tm_news ul li .details {
   border-bottom-right-radius: 8px;
 }
 
-.tokyo_tm_settings .tk-theme-color li .checkmark, .tokyo_tm_settings .colors li .checkmark,.tokyo_tm_settings .tk-theme-radius li .checkmark {
+.shane_tm_settings .shane-theme-color li .checkmark,
+.shane_tm_settings .colors li .checkmark,
+.shane_tm_settings .shane-theme-radius li .checkmark {
   position: absolute;
   transform: scale(0.3);
   z-index: 1;
@@ -74,7 +123,7 @@
   left: 1.8px;
 }
 
-/* .tokyo_tm_settings .tk-theme-radius li .checkmark {
+/* .shane_tm_settings .shane-theme-radius li .checkmark {
   position: absolute;
   transform: scale(0.5);
   z-index: 1;
@@ -82,7 +131,14 @@
   left: -5.5px;
 } */
 
-
+.box_inner.shane-post-rounded-radius {
+  overflow: hidden;
+}
+button#send_message {
+  padding: 15px 35px;
+  font-size: 15px;
+  cursor: pointer;
+}
 .checkmark.draw:after {
   animation-duration: 800ms;
   animation-timing-function: ease;
@@ -92,7 +148,7 @@
 
 .checkmark:after {
   opacity: 1;
-  
+
   height: 3.5em;
   width: 1.75em;
   transform-origin: left top;
@@ -104,17 +160,14 @@
   position: absolute;
 }
 
-
-
-.tokyo_tm_settings .tk-theme-color li:first-child .checkmark:after{
+.shane_tm_settings .shane-theme-color li:first-child .checkmark:after {
   border-right: 10px solid #ffffff;
   border-top: 10px solid #ffffff;
 }
-.tokyo_tm_settings .tk-theme-color li:last-child .checkmark:after{
+.shane_tm_settings .shane-theme-color li:last-child .checkmark:after {
   border-right: 10px solid #333;
   border-top: 10px solid #333;
 }
-
 
 @keyframes loader-spin {
   0% {
@@ -148,22 +201,54 @@
   }
 }
 
-/* .tk-theme-radius li a {
+/* .shane-theme-radius li a {
   width: 40px!important;
   height: 40px!important;
 } */
 
-.tk-theme-radius a.tk-square {
-  border-radius: 0px!important;
+.shane-theme-radius a.shane-square {
+  border-radius: 0px !important;
 }
-.tk-theme-radius a.tk-rounded {
-  border-radius: 6px!important;
+.shane-theme-radius a.shane-rounded {
+  border-radius: 6px !important;
 }
 
-.logo-dark, .logo-light{
+.logo-dark,
+.logo-light {
   display: none;
 }
 
-body.dark .logo-light, body.white .logo-dark{
+body.dark .logo-light,
+body.white .logo-dark {
   display: block;
+}
+
+.shane_tm_settings .wrapper {
+  width: 100%;
+  height: 70vh;
+  clear: both;
+  float: left;
+  overflow-x: auto;
+}
+.shane_tm_settings .wrapper::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.shane_tm_settings .wrapper::-webkit-scrollbar {
+  width: 4px;
+  background-color: #f5f5f5;
+}
+
+.shane_tm_settings .wrapper::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(122, 153, 217)),
+    color-stop(0.72, rgb(73, 125, 189)),
+    color-stop(0.86, rgb(28, 58, 148))
+  );
 }

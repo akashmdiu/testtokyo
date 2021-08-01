@@ -1,0 +1,35 @@
+{% assign skills_data = site.data.site_data[page.portfolio_data] %}
+<!-- SKILLS -->
+<div class="shane_tm_section">
+    <div class="shane_tm_skills">
+        <div class="container">
+            <div class="skills_inner">
+                
+                <div class="left">
+                    <div class="shane_tm_title">
+                        <h3>{{skills_data.skills_title}}</h3>
+                    </div>
+                    <div class="text">
+                        <p>{{skills_data.skills_description}}</p>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="tokyo_progress">
+                        {% for skills in skills_data.skills %}
+                            <div class="progress_inner" data-value="{{skills.expertise}}">
+                                <span><span class="label">{{skills.title}}</span><span class="number">{{skills.expertise}}%</span></span>
+                                <div class="background">
+                                    <div class="bar">
+                                        <div class="bar_in"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /SKILLS -->

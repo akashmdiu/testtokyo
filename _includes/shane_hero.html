@@ -1,0 +1,35 @@
+{% assign hero_data = site.data.site_data[page.hero_data] %}
+{% assign hero_style = 'one' %}
+
+{% if page.home == 01 %}
+    {% assign hero_style = 'one' %}
+{% elsif page.home == 02 %}
+    {% assign hero_style = 'two' %}
+{% elsif page.home == 03 %}
+    {% assign hero_style = 'three' %}
+{% else %}
+    {% assign hero_style = '' %}
+{% endif %}
+
+<!-- HERO -->
+<div class="shane_tm_hero" id="home" data-style="{{hero_style}}">
+    <!-- data-style values: one,two,three >> Empty is SQUARE shape -->
+    <div class="background">
+        <div class="image" data-img-url="{{hero_data.profile_img | relative_url }}"></div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="name_wrap">
+                <h3>{{hero_data.profile_name}}</h3>
+            </div>
+            <div class="job_wrap"><span class="job">{{hero_data.designation}}<span class="overlay_effect"></span></span>
+            </div>
+        </div>
+        <div class="shane_tm_down" data-skin="dark">
+            <div class="line_wrapper">
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /HERO -->

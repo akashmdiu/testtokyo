@@ -11,9 +11,6 @@
                 <div class="short">
                     <p class="date">By <a href="{{author.url | relative_url}}">{{author.name}}</a> <span>{{post.date | date: '%d %B %Y'}}</span></p>
                 </div>
-                <div class="my_like">
-                    <a href="#"><img class="svg" src="{{'/assets/img/svg/like.svg' | relative_url}}" alt="" /><span>35</span></a>
-                </div>
             </div>
             <h3 class="title"><a href="{{post.url | relative_url}}">{{post.title}}</a></h3>
             <div class="tokyo_tm_read_more">
@@ -28,10 +25,12 @@
                 <span>Share:</span>
                 <ul>
                     <li>
-                        <a href="#"><img class="svg" src="{{'/assets/img/svg/social/facebook.svg' | relative_url}}" alt="" /></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ post.url }}"
+                        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><img class="svg" src="{{'/assets/img/svg/social/facebook.svg' | relative_url}}" alt="" /></a>
                     </li>
                     <li>
-                        <a href="#"><img class="svg" src="{{'/assets/img/svg/social/twitter.svg' | relative_url}}" alt="" /></a>
+                        <a href="https://twitter.com/intent/tweet?text={{ post.url }}&url={{ site.url }}{{ site.baseurl }}{{ post.url }}"
+                        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><img class="svg" src="{{'/assets/img/svg/social/twitter.svg' | relative_url}}" alt="" /></a>
                     </li>
                     <li>
                         <a href="#"><img class="svg" src="{{'/assets/img/svg/social/instagram.svg' | relative_url}}" alt="" /></a>

@@ -1,77 +1,144 @@
-home:
-  profile_name: ADRIANO <span>SMITH</span>
+hero:
+  profile_name: '<span>Ave</span> Brook<span class="overlay_effect"></span>'
+  designation: Independent Web Developer
   profile_img: "/assets/img/slider/1.jpg"
-  bio: "Creative Photographer based in New York and happy to travel all over Europe to capture photos."
-  social:
-    facebook: "http://facebook.com"
-    twitter: "http://twitter.com"
-    instagram: "http://instagram.com"
-    dribbble: "http://dribble.com"
-    tiktok: "http://tiktok.com"
 
 about:
-  title: "Adriano Smith & <span>Photographer</span>"
-  description: "Hello, I am a creative photographer based in New York and happy to travel all over Europe to capture your big day in candid and authentic photos. I will create a lasting memory of the people."
-  img_src: "/assets/img/slider/1.jpg"
-  learn_more: Learn More
-  lm_url: #
-  birthday: "01.07.1990"
-  age: 31
-  address: Ave 11, New York, USA
-  email: mail@gmail.com
-  phone: +77 022 177 05 05
-  study: Univercity of Texas
-  freelance: Available
-  photography:
-      - title: Wedding Photography
-        expertise: 95
-      - title: Lifestyle Photography
-        expertise: 85
-      - title: Family Photography
-        expertise: 90
-  languages:
-      - title: English
-        expertise: 95
-      - title: Japanese
-        expertise: 85
-      - title: Arabic
-        expertise: 90
+  shane_section: "About Me"
+  title: "Creative web designer based in New York, USA"
+  description: "I'm web designer, and I'm very passionate and dedicated to my work. With 20 years experience as a professional web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration."
+  img_src: "/assets/img/about/1.jpg"
+  resume_src: "/assets/img/resume/resume.jpg"
+  download_text: Download CV
+
   project_completed: 777+
   happy_clients: 3k+
   lines_of_code: 9k+
   our_partners:
-    - name: one 
+    - name: one
       img_src: "/assets/img/partners/1.png"
       url: #
-    - name: two 
+    - name: two
       img_src: "/assets/img/partners/2.png"
       url: #
-    - name: three 
+    - name: three
       img_src: "/assets/img/partners/3.png"
       url: #
-    - name: Four 
+    - name: Four
       img_src: "/assets/img/partners/4.png"
       url: #
-    - name: Five 
+    - name: Five
       img_src: "/assets/img/partners/5.png"
       url: #
-    - name: Six 
+    - name: Six
       img_src: "/assets/img/partners/6.png"
       url: #
-    - name: Seven 
+    - name: Seven
       img_src: "/assets/img/partners/7.png"
       url: #
-    - name: Eight 
+    - name: Eight
       img_src: "/assets/img/partners/8.png"
       url: #
 
-
 portfolio:
+  shane_section: Portfolio
   title: Creative Portfolio
+  skills_title: I have high skills in developing and programming
+  skills_description: I am working on a professional, visually sophisticated and technologically proficient, responsive and multi-functional personal portfolio template Shane.
+  skills:
+    - title: Web Development
+      expertise: 95
+    - title: Brand Identity
+      expertise: 80
+    - title: Logo Design
+      expertise: 90
+
+video:
+  title: I am delivering beautiful digital products for my clients
+  bg_img_src: "/assets/img/slider/2.jpg"
+  video_src: "https://www.youtube.com/watch?v=iIrSCm_0Sj4"
+  btn_label: Watch Video
+
+partners:
+  - name: one
+    img_src: "/assets/img/partners/1.png"
+    url: /#
+  - name: two
+    img_src: "/assets/img/partners/2.png"
+    url: /#
+  - name: three
+    img_src: "/assets/img/partners/3.png"
+    url: /#
+  - name: four
+    img_src: "/assets/img/partners/4.png"
+    url: /#
+  - name: five
+    img_src: "/assets/img/partners/5.png"
+    url: /#
+  - name: six
+    img_src: "/assets/img/partners/6.png"
+    url: /#
+  - name: seven
+    img_src: "/assets/img/partners/7.png"
+    url: /#
+  - name: eight
+    img_src: "/assets/img/partners/8.png"
+    url: /#
+
+testimonials:
+  shane_section: Testimonials
+  title: What clients say about my portfolio template
+  carousel:
+    - name: Justin Bieber
+      designation: Photographer
+      img_src: "/assets/img/about/1.jpg"
+      testimonial:
+        "We were looking for a logo with a touch of modernism. Arlo grasped our needs
+        and produced a stunning design. Awesome to work with Arlo. Incredibly
+        organized, easy to communicate with, responsive with next iterations."
+
+    - name: Teodor Federico
+      designation: Freelancer
+      img_src: "/assets/img/about/2.jpg"
+      testimonial:
+        "I purchased the theme a few weeks ago. I had some issues with the theme, I
+        asked customer support to help me with and they were helpful and kind to
+        help me with all my problems. I definitely recommend this theme to everyone."
+
+    - name: Bauen Fernandes
+      designation: Web Developer
+      img_src: "/assets/img/about/3.jpg"
+      testimonial:
+        "We were looking for a logo with a touch of modernism. Arlo grasped our needs
+        and produced a stunning design. Awesome to work with Arlo. Incredibly
+        organized, easy to communicate with, responsive with next iterations."
 
 news:
+  shane_section: News
   title: Latest News
 
 contact:
-  title: Get in Touch
+  title: Let's work together!
+  btn_label: Make an enquiry
+  bg_video_src: https://www.youtube.com/watch?v=l6JN5M12BbE
+  modal_data:
+    form_title: Get in Touch
+    action_url: 'https://formspree.io/mknqezny'
+    placeholder_name: Name 
+    placeholder_email: Email
+    placeholder_message: Message
+    form_btn_label: Send Message
+    contact_location: Brook 103, 90021 New York, USA
+    contact_number: +77 033 442 55 57 
+    social_contact: 
+      - name: facebook
+        url: https://facebook.com/
+      - name: twitter
+        url: https://twitter.com/
+      - name: instagram
+        url: https://instagram.com/
+      - name: dribbble
+        url: https://dribbble.com/
+      - name: tiktok
+        url: https://tiktok.com/
 

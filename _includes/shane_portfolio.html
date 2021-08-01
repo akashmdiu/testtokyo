@@ -1,0 +1,55 @@
+{% assign portfolio_data = site.data.site_data[page.portfolio_data] %}
+<!-- PORTFOLIO -->
+<div class="shane_tm_section" id="portfolio">
+    <div class="shane_tm_portfolio">
+        <div class="container">
+            <div class="shane_tm_title">
+                <div class="title_flex">
+                    <div class="left">
+                        <span>{{portfolio_data.shane_section}}</span>
+                        <h3>{{portfolio_data.title}}</h3>
+                    </div>
+                    <div class="portfolio_filter">
+                        <ul>
+                            <li><a href="#" class="current" data-filter="*">All</a></li>
+                            <li><a href="#" data-filter=".design">Design</a></li>
+                            <li><a href="#" data-filter=".branding">Branding</a></li>
+                            <li><a href="#" data-filter=".photography">Photography</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="shane_tm_portfolio_titles"></div>
+            <div class="portfolio_list">
+                <ul class="gallery_zoom">
+                    {% for portfolio in site.data.portfolio %}
+
+                        {% assign protCat = portfolio.cat | slugify %}
+                        {% if protCat == 'branding' %}
+                            {% assign popClass = 'popup-youtube' %}
+                        {% elsif protCat == 'photography' ||  protCat == 'design' %}
+                            {% assign popClass = 'zoom' %}
+                        {% endif %}
+
+                        <li class="{{portfolio.filter_classes}}">
+                            <div class="inner">
+                                <div class="entry shane_tm_portfolio_animation_wrap" data-title="{{portfolio.name}}"
+                                    data-category="{{portfolio.cat | capitalize}}">
+                                    <a class="{{popClass}}" href="{{portfolio.project_url | relative_url}}">
+                                        <img src="{{'/assets/img/placeholders/1-1.jpg' | relative_url}}" alt="" />
+                                        <div class="main" data-img-url="{{portfolio.img_src | relative_url}}"></div>
+                                    </a>
+                                </div>
+                                <div class="mobile_title">
+                                    <h3>{{portfolio.name}}</h3>
+                                    <span>{{portfolio.cat | capitalize}}</span>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /PORTFOLIO -->

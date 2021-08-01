@@ -1,0 +1,52 @@
+<!-- MOBILE MENU -->
+<div class="shane_tm_mobile_menu">
+    <div class="topbar_inner">
+        <div class="container bigger">
+            <div class="topbar_in">
+                <div class="logo">
+                    <a href="{{'/' | relative_url}}"><img src="{{'/assets/img/logo/new/dark.png' | relative_url}}" alt="{{site.title}}" /></a>
+                </div>
+                <div class="my_trigger">
+                    <div class="hamburger hamburger--collapse-r">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <div class="container">
+            <div class="dropdown_inner">
+                <ul class="anchor_nav">
+                    {% assign x = 0 %}
+                    {% for navigation in site.data.navigation %}
+                        {% assign x = x | plus:1 %}
+                        <li {% if x == 1% %} class="current" {% endif %}><a href="#{{navigation.url}}">{{navigation.text}}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MOBILE MENU -->
+
+<!-- TOPBAR -->
+<div class="shane_tm_topbar">
+    <div class="topbar_inner">
+        <div class="logo">
+            <a href="/"><img src="{{'/assets/img/logo/new/dark.png' | relative_url}}" alt="{{site.title}}" /></a>
+        </div>
+        <div class="menu">
+            <ul class="anchor_nav">
+                {% assign x = 0 %}
+                {% for navigation in site.data.navigation %}
+                    {% assign x = x | plus:1 %}
+                    <li {% if x == 1% %} class="current" {% endif %}><a href="#{{navigation.url}}">{{navigation.text}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /TOPBAR -->

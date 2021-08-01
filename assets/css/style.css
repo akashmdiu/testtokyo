@@ -1,25 +1,30 @@
 @charset "utf-8";
-
 /*
 /*	Copyright (c) 2021 Marketify
 /*	Author: Marketify
 /*	This file is made for CURRENT TEMPLATE
 
-01)	TOKYO TOKYO BASE
-02) TOKYO MOBILE MENU
-03) TOKYO LEFTPART
-04) TOKYO RIGHTPART
-05) TOKYO HOME
-06) TOKYO ABOUT
-07) TOKYO PORTFOLIO
-08) TOKYO NEWS
-09) TOKYO CONTACT
-10) TOKYO MAGIC CURSOR
-11) TOKYO MEDIA QUERIES (FOR SMALL DEVIVES)
+
+01) SHANE BASE
+02) SHANE MOBILE MENU
+03) SHANE TOPBAR
+04) SHANE HERO
+05) SHANE ABOUT
+06) SHANE PORTFOLIO
+07) SHANE SKILLS
+08) SHANE VIDEO
+09) SHANE PARTNERS
+10) SHANE TESTIMONIALS
+11) SHANE NEWS
+12) SHANE TALK
+13) SHANE COPYRIGHT
+14) SHANE MODALBOX CONTACT
+15) SHANE CURSOR
+16) SHANE MEDIA QUERIES (FOR SMALL DEVIVES)
 
 
 /*---------------------------------------------------*/
-/*	01) TOKYO BASE
+/*	01) SHANE BASE
 /*---------------------------------------------------*/
 
 html {
@@ -28,7 +33,7 @@ html {
 	margin: 0px
 }
 body{
-	font-family: "Mulish";
+	font-family: "Roboto";
 	font-size: 15px;
 	line-height: 30px;
 	letter-spacing: 0.5px;
@@ -69,7 +74,7 @@ img.svg{
 }
 
 .container{
-	max-width: 960px;
+	max-width: 1200px;
 	width:100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -82,7 +87,7 @@ img.svg{
 h1, h2, h3, h4, h5, h6{
 	font-weight:500;
 	line-height: 1.4;
-	font-family: "Montserrat";
+	font-family: "Poppins";
 	color: #000;
 }
 
@@ -93,21 +98,27 @@ h4 { font-size: 24px; }
 h5 { font-size: 20px; }
 h6 { font-size: 16px; }
 
-.tokyo_tm_all_wrap{
+.shane_tm_all_wrap{
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
 	position: relative;
 }
-.tokyo_tm_all_wrap,
-.tokyo_tm_all_wrap *{
+.shane_tm_all_wrap,
+.shane_tm_all_wrap *{
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */
 }
+.shane_tm_section{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
 
-#preloader{
+#preloader {
     position: fixed;
     left: 0;
     top: 0;
@@ -226,293 +237,460 @@ h6 { font-size: 16px; }
 }
 
 /*---------------------------------------------------*/
-/*	02) TOKYO MOBILE MENU
+/*	02) SHANE MOBILE MENU
 /*---------------------------------------------------*/
 
-.tokyo_tm_mobile_menu{
+.shane_tm_mobile_menu{
+	width: 100%;
+	height: auto;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	display: none;
+	z-index: 10;
+}
+.shane_tm_mobile_menu .topbar_inner{
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: both;
+	background-color: #fff;
+	padding: 20px 0px;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+}
+.shane_tm_mobile_menu .topbar_in{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.my_trigger .hamburger{
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+}
+.my_trigger .hamburger-box{
+    width: 30px;
+    height: 18px;
+    display: inline-block;
+    position: relative;
+}
+.my_trigger .hamburger-inner{
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+.my_trigger .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+    width: 30px;
+    height: 2px;
+    background-color: #333333;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+	
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+}
+.my_trigger .hamburger-inner::before,
+.my_trigger .hamburger-inner::after{
+    content: "";
+    display: block;
+}
+.my_trigger .hamburger-inner::before{top: -8px;}
+.my_trigger .hamburger-inner::after{ bottom: -10px;}
+.my_trigger .hamburger--collapse-r .hamburger-inner{
+    top: auto;
+    bottom: 0;
+    transition-duration: 0.13s;
+    transition-delay: 0.13s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.my_trigger .hamburger--collapse-r .hamburger-inner::after{
+    top: -16px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+.my_trigger .hamburger--collapse-r .hamburger-inner::before{
+    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.my_trigger .hamburger--collapse-r.is-active .hamburger-inner{
+    transform: translate3d(0, -10px, 0) rotate(45deg);
+    transition-delay: 0.22s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.my_trigger .hamburger--collapse-r.is-active .hamburger-inner::after{
+    top: 0;
+    opacity: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+}
+.my_trigger .hamburger--collapse-r.is-active .hamburger-inner::before{
+    top: 0;
+    transform: rotate(90deg);
+    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.my_trigger .hamburger{
+	padding: 0px;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+.my_trigger .hamburger .hamburger-inner::before,
+.my_trigger .hamburger .hamburger-inner::after,
+.my_trigger .hamburger .hamburger-inner{
+	background-color: #000;
+	width: 30px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.shane_tm_mobile_menu .dropdown{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #fff;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	display: none;
+}
+.shane_tm_mobile_menu .dropdown .dropdown_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 25px 0px;
+}
+.shane_tm_mobile_menu .dropdown .dropdown_inner ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.shane_tm_mobile_menu .dropdown .dropdown_inner ul li{
+	margin: 0px;
+	float: left;
+	width: 100%;
+}
+.shane_tm_mobile_menu .dropdown .dropdown_inner ul li a{
+	text-decoration: none;
+	color: #000;
+	display: inline-block;
+	padding: 4px 0px;
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+.shane_tm_mobile_menu .logo img{max-width: 100px;}
+
+/*---------------------------------------------------*/
+/*	03) SHANE TOPBAR
+/*---------------------------------------------------*/
+
+.shane_tm_topbar{
 	position: fixed;
 	top: 0px;
 	left: 0px;
 	right: 0px;
 	z-index: 10;
-	background-color: #fff;
-	display: none;
+	transition: all .3s ease;
+	transform: translateY(-100%);
 }
-.tokyo_tm_mobile_menu .menu_inner{
+.shane_tm_topbar.loaded{transform: translateY(0);}
+.shane_tm_topbar .topbar_inner{
 	width: 100%;
 	height: auto;
 	clear: both;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 20px 40px;
+	padding: 25px 50px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
 }
-.tokyo_tm_mobile_menu .logo img{
-	max-width: 100px;
+.shane_tm_topbar .topbar_inner.opened{
+	background-color: #fff;
+	padding: 20px 50px;
+	box-shadow: 0px 0px 30px rgba(0,0,0,.1);
 }
-.tokyo_tm_mobile_menu .menu ul{
+.shane_tm_topbar .topbar_inner .logo a{display: inline-block;}
+.shane_tm_topbar .topbar_inner .logo img{
+	max-width: 70px;
+}
+.shane_tm_topbar .menu ul{
 	margin: 0px;
 	list-style-type: none;
 }
-.tokyo_tm_mobile_menu .menu ul li{
-	margin: 0px 10px 0px 0px;
+.shane_tm_topbar .menu ul li{
+	margin: 0px;
 	display: inline-block;
 }
-.tokyo_tm_mobile_menu .menu ul li:last-child{
-	margin-right: 0px;
+.shane_tm_topbar .menu ul li{
+	margin: 0px 25px 0px 0px;
+	display: inline-block;
 }
-.tokyo_tm_mobile_menu .menu ul li a{
+.shane_tm_topbar .menu ul li:last-child{margin-right: 0px;}
+.shane_tm_topbar .menu ul li a{
 	text-decoration: none;
 	color: #000;
+	font-weight: 500;
+	font-family: "Poppins";
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
 }
-.tokyo_tm_mobile_menu .menu ul li .svg{
-	width: 16px;
-	height: 16px;
-}
+.shane_tm_topbar .menu ul li.current a{color: #000;}
+.shane_tm_topbar .menu ul li a:hover{color: #000;}
+
 
 /*---------------------------------------------------*/
-/*	03) TOKYO LEFTPART
+/*	04) SHANE HERO
 /*---------------------------------------------------*/
 
-.tokyo_tm_all_wrap .leftpart{
-	width: 450px;
+.shane_tm_hero{
+	width: 100%;
 	height: 100vh;
-	position: fixed;
-	display: flex;
-	align-items: center;
-	z-index: 10;
-	padding: 0px 100px;
-	background-color: #fff;
+	float: left;
+	clear: both;
+	position: relative;
 }
-.tokyo_tm_all_wrap .leftpart_inner{
+.shane_tm_hero .background{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 50%;
+}
+.shane_tm_hero .image{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.shane_tm_hero[data-style="one"] .background{clip-path: polygon(0% 100%, 21% 0%, 100% 0%, 100% 100%);}
+.shane_tm_hero[data-style="two"] .background{clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);}
+.shane_tm_hero[data-style="three"] .background{clip-path: ellipse(70% 80% at 70% 50%);}
+.shane_tm_hero .container{height: 100%;}
+.shane_tm_hero .content{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	padding-right: 20px;
+}
+.shane_tm_hero .name_wrap{
 	width: 100%;
 	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 6px;
 }
-.tokyo_tm_all_wrap .leftpart img{
-	max-width: 150px;
-}
-.tokyo_tm_all_wrap .leftpart .menu{
-	padding: 40px 0px 50px 0px;
+.shane_tm_hero .job_wrap{
 	width: 100%;
+	height: auto;
+	clear: both;
 	float: left;
 }
-.tokyo_tm_all_wrap .leftpart .menu ul{
-	margin: 0px;
-	list-style-type: none;
-}
-.tokyo_tm_all_wrap .leftpart .menu ul li{
-	margin: 0px;
-	width: 100%;
-	float: left;
-}
-.tokyo_tm_all_wrap .leftpart .menu ul li a{
-	text-decoration: none;
-	color: #767676;
+.shane_tm_hero .content h3{
+	position: relative;
+	font-size: 72px;
+	font-family: "Montserrat";
+	text-transform: uppercase;
+	font-weight: 900;
+	color: #000;
+	line-height: 1.2;
 	display: inline-block;
+	overflow:hidden;
+}
+.shane_tm_hero .content h3 span{
+	color: transparent;
+	-webkit-text-stroke: 1px #000;
+	padding-left: 2px;
+}
+.shane_tm_hero .content .job{
 	font-weight: 500;
-	font-family: "Montserrat";
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.tokyo_tm_all_wrap .leftpart .menu ul li a:hover{
-	color: #000;
-	letter-spacing: 2px;
-}
-.tokyo_tm_all_wrap .leftpart .menu ul li.active a{
-	color: #000;
-	letter-spacing: 2px;
-}
-.tokyo_tm_all_wrap .leftpart .copyright{
-	width: 100%;
-	float: left;
-}
-.tokyo_tm_all_wrap .leftpart .copyright p{
-	font-size: 15px;
-	color: #999;
-	font-family: "Montserrat";
-	line-height: 25px;
-	font-style: italic;
-}
-.tokyo_tm_all_wrap .leftpart .copyright a{
-	text-decoration: none;
-	color: #787878;
-	font-weight: 500;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.tokyo_tm_all_wrap .leftpart .copyright a:hover{
-	color: #000;
-	letter-spacing: 2px;
-}
-
-/*---------------------------------------------------*/
-/*	04) TOKYO RIGHTPART 
-/*---------------------------------------------------*/
-
-.tokyo_tm_all_wrap .rightpart{
-	width: 100%;
-	min-height: 100vh;
+	font-size: 17px;
+	font-family: "Roboto";
+	margin-bottom: 30px;
 	float: left;
 	position: relative;
-	background-color: #f8f8f8;
-	padding-left: 450px;
+	overflow:hidden; 
 }
-.tokyo_tm_all_wrap .rightpart_in{
-	position: relative;
-	width: 100%;
-	float: left;
-	clear: both;
-	border-left: 1px solid #ebebeb;
-	min-height: 100vh;
-}
-.tokyo_tm_section{
-	position: fixed;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-	padding-left: 450px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    opacity: 0;
-    transform: translate3d(5%, 0, 0);
-    transition: transform .3s ease .3s,opacity 0s ease .3s;
-	z-index: -1;
-}
-.tokyo_tm_section.active{
-	opacity: 1;
-	transform: translate3d(0, 0, 0);
-	z-index: 5;
-}
-
-/*---------------------------------------------------*/
-/*	05) TOKYO HOME
-/*---------------------------------------------------*/
-
-.tokyo_tm_home{
-	width: 100%;
-	min-height: 100vh;
-	clear: both;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-}
-.tokyo_tm_home .home_content{
-	display: flex;
-	align-items: center;
-}
-.tokyo_tm_home .avatar{
-	min-width: 300px;
-	min-height: 300px;
-	position: relative;
-	border-radius: 100%;
-}
-.tokyo_tm_home .avatar .image{
+.overlay_effect{
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	background-repeat: no-repeat;
-	background-position:center;
-	background-size: cover;
-	animation: morph 8s ease-in-out infinite 1s;
-	background-blend-mode: multiply;
-	-webkit-box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
-    -moz-box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
-    box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
+	z-index: 3;
+}
+.overlay_effect:after{
+	position: absolute;
+	content: "";
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: #fff;
+	z-index: 1;
+}
+.overlay_effect:before{
+	position: absolute;
+	content: "";
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+body.loaded .overlay_effect:before{
+	z-index: 2;
+  	background-color: #000;
+  	animation: anim 2s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+body.loaded .overlay_effect:after{
+ 	animation: anim2 2s cubic-bezier(0.77, 0, 0.175, 1) both;
 }
 
-@keyframes morph {
-	 0% {
-		 border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-	}
-	 50% {
-		 border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-	}
-	 100% {
-		 border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-	}
+@keyframes anim{
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
-.tokyo_tm_home .details{
-	margin-left: 80px;
+@keyframes anim2{
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
-.tokyo_tm_home .details .name{
-	font-size: 55px;
-	font-weight: 800;
-	text-transform: uppercase;
-	margin-bottom: 14px;
+.shane_tm_down{
+	position: absolute;
+	z-index: 7;
+	bottom: 50px;
+	display: none;
 }
-.tokyo_tm_home .details .job{
-	font-family: "Montserrat";
-	font-style: italic;
-	font-weight: 500;
-	max-width: 450px;
-	margin-bottom: 30px;
+.shane_tm_down.loaded{display: block;}
+.shane_tm_down[data-position="left"]{left: 0px;}
+.shane_tm_down[data-position="right"]{right: 0px;}
+.shane_tm_down[data-position="center"]{
+	left:50%;
+	transform: translateX(-50%);
 }
-.tokyo_tm_home .social{
-	width: 100%;
-	float: left;
-}
-.tokyo_tm_home .social ul{
-	margin: 0px;
-	list-style-type: none;
-}
-.tokyo_tm_home .social ul li{
-	margin: 0px 12px 0px 0px;
-	display: inline-block;
-}
-.tokyo_tm_home .social ul li:last-child{
-	margin-right: 0px;
-}
-.tokyo_tm_home .social ul li a{
-	text-decoration: none;
-	color: #000;
+.shane_tm_down .line_wrapper{
+	position: absolute;
+    width: 1px;
+    height: 100%;
+    left: 0;
+    right: 0;
+   	margin: 0px auto;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
 	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -ms-transition: all .7s;
+    -o-transition: all .7s;
+    transition: all .7s;
 }
-.tokyo_tm_home .social ul li a:hover{
-	color: #000;
+.shane_tm_down .line_wrapper{
+    width: 1px;
+    height: 50px;
+    background: none;
+	display: block;
 }
-.tokyo_tm_home .social ul li .svg{
-	width: 17px;
-	height: 17px;
+.shane_tm_down .line_wrapper:before{
+	content: "";
+	background-color: #000;
+	width: 1px;
+    height: 50%;
+    display: block;
+    top: 0;
+	
+    -webkit-animation: scroll-down 2s ease-in-out infinite;
+    -ms-animation: scroll-down 2s ease-in-out infinite;
+    animation: scroll-down 2s ease-in-out infinite;;
 }
 
+@-webkit-keyframes scroll-down {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100%;
+  }
+  70% {
+    height: 100%;
+    transform: scaleY(0.5);
+    transform-origin: bottom;
+  }
+  100% {
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+.shane_tm_down[data-skin="light"] .line_wrapper:before{background-color: #fff;}
+
 /*---------------------------------------------------*/
-/*	06) TOKYO ABOUT
+/*	05) SHANE ABOUT
 /*---------------------------------------------------*/
 
-.tokyo_tm_about{
+.shane_tm_about{
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
-	padding: 100px 0px 100px 0px;
+	padding: 150px 0px;
 }
-.tokyo_tm_about .about_image{
-	position: relative;
-	margin-bottom: 48px;
+.shane_tm_about .about_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	align-items: center;
 }
-.tokyo_tm_about .about_image img{
-	opacity: 0;
+.shane_tm_about .left{
+	width: 50%;
+	padding-right: 50px;
+}
+.shane_tm_about .left .image{position: relative;}
+.shane_tm_about .left .image img{
 	min-width: 100%;
+	opacity: 0;
 }
-.tokyo_tm_about .about_image .main{
+.shane_tm_about .left .main{
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
@@ -521,213 +699,263 @@ h6 { font-size: 16px; }
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	box-shadow: 0px 0px 40px rgb(0 0 0 / 20%);
 }
-.tokyo_tm_about .about_image img{
-	min-width: 100%;
-	box-shadow: 0px 0px 20px rgba(0,0,0,.12);
+.shane_tm_about .experience span{display: block;}
+.shane_tm_about .experience .year{
+	font-size: 80px;
+	font-weight: 800;
+	font-family: "Poppins";
+	color: #fff;
+	margin-bottom: 3px;
+	line-height: 1;
+	font-style:italic; 
 }
-.tokyo_tm_about .description{
+.shane_tm_about .experience .text{
+	color: #fff;
+	font-style: italic;
+	font-family: "Poppins";
+	opacity: .7;
+}
+.shane_tm_about .right{
+	width: 50%;
+	padding-left: 50px;
+}
+.shane_tm_title{
 	width: 100%;
 	height: auto;
 	clear: both;
+	float: left;
 }
-.tokyo_tm_about .description_inner{
+.shane_tm_title h3{
+	font-weight: 800;
+	font-family: "Poppins";
+} 
+.shane_tm_title span{
+	display: inline-block;
+	background-color: rgba(0,0,0,.05);
+	text-transform: uppercase;
+	padding: 4px 10px;
+	font-weight: 600;
+	font-size: 12px;
+	color: #333;
+	font-family: "Poppins";
+	letter-spacing: 0px;
+	margin-bottom: 15px;
+}
+.shane_tm_about .right .text{
 	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 40px;
+	padding-top: 27px;
+}
+.shane_tm_button{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.shane_tm_button .submit-btn{
+	text-decoration: none;
+	color: #fff;
+	background-color: #000;
+	display: inline-block;
+	padding: 13px 48px;
+	border: 2px solid #000;
+	font-family: "Poppins";
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.shane_tm_button .submit-btn:hover{
+	color: #000;
+	background-color: transparent;
+}
+
+/*---------------------------------------------------*/
+/*	06) SHANE PORTFOLIO
+/*---------------------------------------------------*/
+
+.shane_tm_title .title_flex{
+	width: 100%;
+	height: auto;
+	clear: both;
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-end;
 }
-.tokyo_tm_about .description .left{
-	width: 55%;
-	padding-right: 50px;
-}
-.tokyo_tm_about .description .left p{
-	margin-bottom: 35px;
-	font-style: italic;
-}
-.tokyo_tm_about .description .name{
-	font-weight: 700;
-	font-size: 22px;
-	margin-bottom: 26px;
-}
-.tokyo_tm_about .description .right{
-	width: 45%;
-	padding-left: 50px;
-}
-.tokyo_tm_about .description .right > ul{
+.shane_tm_portfolio .portfolio_filter ul{
 	margin: 0px;
 	list-style-type: none;
 }
-.tokyo_tm_about .description .right > ul > li{
-	margin: 0px;
-	width: 100%;
-	float: left;
-}
-.tokyo_tm_about .description .right > ul > li span{
-	min-width: 90px;
+.shane_tm_portfolio .portfolio_filter ul li{
+	margin: 0px 25px 0px 0px;
 	display: inline-block;
-	font-weight: 700;
-	color: #000;
-	font-style: italic;
 }
-.tokyo_tm_about .description .right > ul > li a{
+.shane_tm_portfolio .portfolio_filter ul li:last-child{margin-right: 0px;}
+.shane_tm_portfolio .portfolio_filter ul li a{
 	text-decoration: none;
-	color: #787878;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.tokyo_tm_about .description .right > ul > li a:hover{
 	color: #000;
-	letter-spacing: 2px;
+	font-family: "Poppins";
+	font-weight: 500;
 }
-.tokyo_tm_button{
+.shane_tm_portfolio{
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
+	background-color: #f9f9f9;
+	padding: 150px 0px 100px 0px;
+	margin-bottom: 138px;
 }
-.tokyo_tm_button button, .tokyo_tm_button a {
-    text-decoration: none;
-    color: #fff;
-    display: inline-block;
-    background-color: #000;
-    padding: 14px 40px 14px 40px;
-    font-style: italic;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-    border: none;
-    line-height: 2em;
-    font-size: 1em;
+.shane_tm_portfolio .portfolio_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 89px;
 }
-.tokyo_tm_button button:hover, .tokyo_tm_button a:hover{
-	letter-spacing: 2px;
-	cursor: pointer;
+.shane_tm_portfolio .portfolio_list ul{
+	margin: 0px 0px 0px -50px;
+	list-style-type: none;
 }
-.tokyo_tm_modalbox_about{
-	position: fixed;
+.shane_tm_portfolio .portfolio_list ul li{
+	margin: 0px 0px 50px 0px;
+	width: 33.3333%;
+	float: left;
+	padding-left: 50px;
+}
+.shane_tm_portfolio .portfolio_list ul li .inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+.shane_tm_portfolio .portfolio_list .image{position: relative;}
+.shane_tm_portfolio .portfolio_list .inner img{min-width: 100%;}
+.shane_tm_portfolio .portfolio_list .main{
+	position: absolute;
 	top: 0px;
+	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	height: 100vh;
-	z-index: 15;
-	background-color: rgba(0,0,0,.8);
-	opacity: 0;
-	visibility: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+    clip-path: inset(0 0 0 0);
 	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
+	-webkit-transition: all .3s ease-in-out;
+	   -moz-transition: all .3s ease-in-out;
+	    -ms-transition: all .3s ease-in-out;
+	     -o-transition: all .3s ease-in-out;
+	        transition: all .3s ease-in-out;
 }
-.tokyo_tm_modalbox_about.opened{
-	opacity: 1;
-	visibility: visible;
-}
-.tokyo_tm_modalbox_about .container{
-	height: 100vh;
-}
-.tokyo_tm_modalbox_about .box_inner{
-	position: absolute;
-	top: 70px;
-	bottom: 70px;
-	width: 968px;
-	left: 50%;
-	transform: translateX(-50%);
-	background-color: #fff;
-	z-index: 1;
-	opacity: 0;
-	visibility: hidden;
-	margin-top: -20px;
-	transition-delay: .3s;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.tokyo_tm_modalbox_about.opened .box_inner{
-	opacity: 1;
-	visibility: visible;
-	margin-top: 0px;
-}
-.tokyo_tm_modalbox_about .close{
+.shane_tm_portfolio .portfolio_list ul li .inner:hover .main{clip-path: inset(2% 2% 2% 2%);}
+.shane_tm_portfolio_titles {
+	white-space: nowrap;
+	background: #ffffff;
+	font-size: 18px;
+	padding: 5px 15px;
+	font-family: "Poppins";
+	font-weight: 600;
+	color: #000;
 	position: fixed;
-	left: 100%;
-	top: 0px;
-	margin-left: 40px;
-	z-index: 111111;
+	z-index: 5;
+	opacity: 0;
+	visibility: hidden;
 }
-.tokyo_tm_modalbox_about .close a{
-	text-decoration: none;
-	color: #fff;
+.shane_tm_portfolio_titles.visible {
+	opacity: 1;
+	visibility: visible;
 }
-.tokyo_tm_modalbox_about .close .svg{
-	width: 50px;
-	height: 50px;
+.shane_tm_portfolio_titles .work__cat {
+	position: absolute;
+	background: #ffffff;
+	top: 100%;
+	left: 0;
+	margin-top: -10px;
+	font-family: "Poppins";
+	font-size: 15px;
+	font-weight: 500;
+	padding: 5px 15px;
 }
-.tokyo_tm_modalbox_about .description_wrap{
-	position: relative;
+.entry{position: relative;}
+.shane_tm_portfolio .mobile_title{
 	width: 100%;
-	height: 100%;
+	height: auto;
+	clear: both;
 	float: left;
-	overflow: hidden;
-	padding: 90px 70px 75px 70px;
+	padding-top: 20px;
+	display: none;
 }
-.tokyo_tm_modalbox_about .my_box{
+.shane_tm_portfolio .mobile_title h3{
+	font-size: 18px;
+	font-weight: 600;
+}
+.shane_tm_portfolio .mobile_title span{
+	font-family: "Poppins";
+	font-weight: 500;
+}
+
+/*---------------------------------------------------*/
+/*	07) SHANE SKILLS
+/*---------------------------------------------------*/
+
+.shane_tm_skills{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 140px;
+}
+.shane_tm_skills .skills_inner{
 	width: 100%;
 	height: auto;
 	clear: both;
 	display: flex;
-	margin-bottom: 92px;
 }
-.tokyo_tm_modalbox_about .my_box .left{
+.shane_tm_skills .left{
 	width: 50%;
 	padding-right: 50px;
 }
-.tokyo_tm_modalbox_about .about_title h3{
-	font-weight: 700;
-	color: #000;
-	font-size: 20px;
+.shane_tm_skills .text{
+	padding-top: 27px;
+	float: left;
 }
 .tokyo_progress{
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
-	padding-top: 33px;
 }
 .progress_inner{
 	width:100%;
-	margin-bottom:17px;
+	margin-bottom:34px;
 }
-.progress_inner:last-child{
-	margin-bottom: 0px;
-}
+.progress_inner:last-child{margin-bottom: 0px;}
 .progress_inner > span{
-	margin:0px 0px 5px 0px;
+	margin:0px 0px 7px 0px;
 	width:100%;
 	display:block;
 	text-align:left;
-	color: #000;
-	font-style: italic;
+	font-family: "Poppins";
+	font-weight: 500;
+	color: #333;
 }
-.progress_inner span.number{
-	float: right;
-}
+.progress_inner span.number{float: right;}
 .progress_inner .background{
-	background:rgba(0,0,0,.09);
+	background:rgba(0,0,0,.05);
 	width:100%;
 	min-width:100%;
 	position:relative;
-	height:3px;
+	height:4px;
 }
 .progress_inner .background .bar_in{
 	height:100%;
@@ -740,9 +968,9 @@ h6 { font-size: 16px; }
 	height:100%;
 }
 .progress_inner .background .bar.open{
-	-webkit-animation: wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Safari 4+ */
-	-moz-animation:    wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Fx 5+ */
-	animation:         wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE 10+ */
+	-webkit-animation: wow 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Safari 4+ */
+	-moz-animation:    wow 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Fx 5+ */
+	animation:         wow 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE 10+ */
 	width:100%;	
 }
 
@@ -750,58 +978,146 @@ h6 { font-size: 16px; }
 @-moz-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
 @keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
 
-.tokyo_tm_modalbox_about .my_box .right{
+.shane_tm_skills .right{
 	width: 50%;
 	padding-left: 50px;
 }
-.tokyo_tm_modalbox_about .counter{
-	width: 100%;
-	float: left;
-	clear: both;
-}
-.tokyo_tm_modalbox_about .counter ul{
-	margin: 0px 0px 42px -50px;
-	list-style-type: none;
-	padding-top: 45px;
-	display: flex;
-	flex-wrap: wrap;
-}
-.tokyo_tm_modalbox_about .counter ul li{
-	margin: 0px 0px 50px 0px;
-	width: 33.3333%;
-	float: left;
-	padding-left: 50px;
-} 
-.tokyo_tm_modalbox_about .list_inner{
-	width: 100%;
-	height: 100%;
-	clear: both;
-	float: left;
-	position: relative;
-	border: 1px solid rgba(0,0,0,.1);
-	text-align: center;
-	padding: 40px 20px;
-}
-.tokyo_tm_modalbox_about .counter ul li h3{
-	font-weight: 600;
-	font-size: 20px;
-	margin-bottom: 3px;
-}
-.tokyo_tm_modalbox_about .counter ul li span{
-	font-style: italic;
-}
-.tokyo_tm_modalbox_about .partners{
+
+/*---------------------------------------------------*/
+/*	08) SHANE VIDEO
+/*---------------------------------------------------*/
+
+.shane_tm_business_video{
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
 }
-.tokyo_tm_modalbox_about .partners ul{
+.shane_tm_business_video{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.shane_tm_business_video .bg{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.shane_tm_business_video .bg .image{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:center; 
+}
+.shane_tm_business_video .bg .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0,0,0,.4);
+	z-index: 1;
+}
+.shane_tm_business_video .content{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	margin: 0px auto;
+	z-index: 2;
+	text-align: center;
+	padding: 150px 0px;
+}
+.shane_tm_business_video .rounded{
+	width: 100px;
+	height: 100px;
+	display: block;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 100%;
+	background-color: #fff;
+	margin-bottom: 45px;
+}
+.shane_tm_business_video .rounded:before{
+	position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 13px 0 13px 26px;
+    border-color: transparent transparent transparent #000;
+    top: 50%;
+    left: 50%;
+    margin-left: 4px;
+    transform: translate(-50%,-50%);
+}
+.shane_tm_business_video .text{
+	color: #fff;
+	font-family: "Poppins";
+	font-size: 30px;
+	max-width: 600px;
+	margin: 0px auto;
+	margin-bottom: 50px;
+	font-weight: 800;
+}
+.shane_tm_video_button{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.shane_tm_video_button a{
+	text-decoration: none;
+	color: #fff;
+	background-color: transparent;
+	display: inline-block;
+	padding: 13px 48px;
+	border: 2px solid #fff;
+	font-family: "Poppins";
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.shane_tm_video_button a:hover{
+	color: #000;
+	background-color: #fff;
+}
+
+/*---------------------------------------------------*/
+/*	09) SHANE PARTNERS
+/*---------------------------------------------------*/
+
+.shane_tm_partners{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.shane_tm_partners .partners_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 90px 0px;
+}
+.shane_tm_partners .partners_inner ul{
 	margin: 0px;
 	list-style-type: none;
-	padding-top: 15px;
 }
-.tokyo_tm_modalbox_about .partners ul li{
+.shane_tm_partners .partners_inner ul li{
 	margin: 0px;
 	opacity: .5;
 	
@@ -811,201 +1127,173 @@ h6 { font-size: 16px; }
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-.tokyo_tm_modalbox_about .partners ul li:hover{
-	opacity: 1;
+.shane_tm_partners .partners_inner ul li{
+	max-width: 200px;
+	max-height: 200px;
 }
+.shane_tm_partners .partners_inner ul li:hover{opacity: 1;}
 
 /*---------------------------------------------------*/
-/*	07) ARLO PORTFOLIO
+/*	10) SHANE TESTIMONIALS
 /*---------------------------------------------------*/
 
-.tokyo_tm_title{
+.shane_tm_testimonials{
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
-	margin-bottom: 62px;
+	background-color: #f9f9f9;
+	padding: 150px 0px;
 }
-.tokyo_tm_title h3{
-	font-weight: 800;
-	font-family: "Montserrat";
-} 
-.tokyo_tm_title span{
-	display: inline-block;
-	background-color: rgba(0,0,0,.04);
-	text-transform: uppercase;
-	padding: 4px 10px;
-	font-weight: 600;
-	font-size: 12px;
-	color: #333;
-	font-family: "Montserrat";
-	letter-spacing: 0px;
-	margin-bottom: 11px;
-}
-.tokyo_tm_title .title_flex{
+.shane_tm_testimonials .testimonials_inner{
 	width: 100%;
 	height: auto;
 	clear: both;
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-end;
 }
-.tokyo_tm_portfolio .portfolio_filter ul{
+.shane_tm_testimonials .left{
+	width: 50%;
+	padding-right: 50px;
+}
+.shane_tm_testimonials .right{
+	width: 50%;
+	padding-left: 50px;
+}
+.shane_tm_testimonials .right ul{
 	margin: 0px;
 	list-style-type: none;
 }
-.tokyo_tm_portfolio .portfolio_filter ul li{
-	margin: 0px 25px 0px 0px;
-	display: inline-block;
-}
-.tokyo_tm_portfolio .portfolio_filter ul li:last-child{
-	margin-right: 0px;
-}
-.tokyo_tm_portfolio .portfolio_filter ul li a{
-	text-decoration: none;
-	color: #767676;
-	display: inline-block;
-	font-weight: 500;
-	font-family: "Montserrat";
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.tokyo_tm_portfolio .portfolio_filter ul li a.current{
-	color: #000;
-	letter-spacing: 2px;
-}
-.tokyo_tm_portfolio .portfolio_filter ul li a:hover{
-	color: #000;
-	letter-spacing: 2px;
-}
-.tokyo_tm_portfolio .list_wrapper{
+.shane_tm_testimonials .right ul li{margin: 0px;}
+.shane_tm_testimonials .right .texts p{margin-bottom: 40px;}
+.shane_tm_testimonials .right .author{
 	width: 100%;
 	height: auto;
 	clear: both;
-	float: left;
+	display: flex;
+	align-items: center;
 }
-.tokyo_tm_portfolio{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	padding: 100px 0px 50px 0px;
-}
-.tokyo_tm_portfolio .portfolio_list{
-	margin: 0px 0px 0px -50px;
-	list-style-type: none;
-}
-.tokyo_tm_portfolio .portfolio_list li{
-	margin: 0px 0px 50px 0px;
-	float: left;
-	width: 50%;
-	padding-left: 50px;
-}
-.tokyo_tm_portfolio .portfolio_list li .inner{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	overflow: hidden;
+.shane_tm_testimonials .right .author .image{
+	width: 65px;
+	height: 65px;
+	border-radius: 100%;
 	position: relative;
+	overflow: hidden;
 }
-.tokyo_tm_portfolio .portfolio_list li .inner img{
-	opacity: 0;
-	min-width: 100%;
-}
-.tokyo_tm_portfolio .portfolio_list li .inner .main_image{
+.shane_tm_testimonials .right .author .main{
 	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
+	top: -4px;
+	bottom: -4px;
+	left: -4px;
+	right: -4px;
 	background-repeat: no-repeat;
-	background-position: center;
 	background-size: cover;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.tokyo_tm_portfolio .portfolio_list li .inner:hover .main_image{
-	transform: scale(1.1) translateZ(0);
-}
-.tokyo_tm_portfolio_titles {
-	white-space: nowrap;
-	background: #ffffff;
-	font-size: 18px;
-	padding: 5px 15px;
-	font-family: "Montserrat";
-	font-weight: 600;
-	color: #000;
-	position: fixed;
-	z-index: 6;
+	background-position: center;
+	border-radius: 100%;
 	opacity: 0;
-	visibility: hidden;
+	
+	-webkit-transition: all 1s ease;
+	   -moz-transition: all 1s ease;
+	    -ms-transition: all 1s ease;
+	     -o-transition: all 1s ease;
+	        transition: all 1s ease;
+	
+	transform: scale(1.5) translateZ(0);
 }
-.tokyo_tm_portfolio_titles.visible {
+.shane_tm_testimonials .right .owl-carousel .owl-item.active .author .main{
 	opacity: 1;
-	visibility: visible;
+	transition: all 1s .3s ease;
+	transform: scale(1) translateZ(0);
 }
-.tokyo_tm_portfolio_titles .work__cat {
-	position: absolute;
-	background: #ffffff;
-	top: 100%;
-	left: 0;
-	margin-top: -10px;
-	font-family: "Mulish";
-	font-weight: 500;
-	padding: 5px 15px;
-	color: #767676;
+.shane_tm_testimonials .right .short{padding-left: 25px;}
+.shane_tm_testimonials .right .short h3{
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	line-height: 1;
+	position: relative;
+}
+.shane_tm_testimonials .right .short .author{
+	font-family: "Montserrat";
+	font-size: 18px;
+	color: #000;
+	font-weight: 600;
+	margin-bottom: 0px;
+	margin-bottom: 5px;
+}
+.shane_tm_testimonials .right .short .job{
+	font-weight: 400;
+	display: block;
 	font-size: 15px;
-	font-style: italic;
 }
-.entry{position: relative;}
+.shane_tm_testimonials .right .short .author span,
+.shane_tm_testimonials .right .short .job span{
+	position: relative;
+	display: block;
+	padding: 2px 0px;
+	transform: translateY(102%);
+	
+	-webkit-transition: all 1s ease;
+	   -moz-transition: all 1s ease;
+	    -ms-transition: all 1s ease;
+	     -o-transition: all 1s ease;
+	        transition: all 1s ease;
+}
+.shane_tm_testimonials .right .owl-carousel .owl-item.active .short .author span{
+	transform: translateY(0px);
+	transition-delay: 0.3s;
+}
+.shane_tm_testimonials .right .owl-carousel .owl-item.active .short .job span{
+	transform: translateY(0px);
+	transition-delay: 0.6s;
+}
 
 /*---------------------------------------------------*/
-/*	08) TOKYO NEWS 
+/*	11) SHANE NEWS
 /*---------------------------------------------------*/
 
-.tokyo_tm_news{
+.shane_tm_news{
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
-	padding: 100px 0px 45px 0px;
+	padding: 150px 0px 90px 0px;
 }
-.tokyo_tm_news ul{
-	margin: 0px 0px 0px -50px;
-	list-style-type: none;
-}
-.tokyo_tm_news ul li{
-	margin: 0px 0px 50px 0px;
-	float: left;
-	width: 50%;
-	padding-left: 50px;
-}
-.tokyo_tm_news ul li .list_inner{
+.shane_tm_news .news_list{
 	width: 100%;
 	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 90px;
+}
+.shane_tm_news .news_list ul{
+	margin: 0px 0px 0px -50px;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.shane_tm_news .news_list ul li{
+	margin: 0px 0px 50px 0px;
+	float: left;
+	width: 33.3333%;
+	padding-left: 50px;
+}
+.shane_tm_news .news_list ul li .list_inner{
+	width: 100%;
+	height: 100%;
 	clear: both;
 	float: left;
 	position: relative;
-	box-shadow: 0px 0px 20px rgba(0,0,0,.07);
 }
-.tokyo_tm_news ul li .image{
+.shane_tm_news .news_list ul li .image{
 	position: relative;
 	overflow: hidden;
 }
-.tokyo_tm_news ul li .image img{
+.shane_tm_news .news_list ul li .image img{
 	min-width: 100%;
 	opacity: 0;
 }
-.tokyo_tm_news ul li .image .main{
+.shane_tm_news .news_list ul li .image .main{
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
@@ -1014,6 +1302,7 @@ h6 { font-size: 16px; }
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position:center; 
+	transform: scale(1) translateZ(0);
 	
 	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
@@ -1021,29 +1310,15 @@ h6 { font-size: 16px; }
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-.tokyo_tm_news ul li .list_inner .image:hover .main{
-	transform: scale(1.1) translateZ(0);
-}
-.tokyo_tm_news ul li .details{
+.shane_tm_news .news_list ul li .list_inner .image:hover .main{transform: scale(1.1) rotate(3deg);}
+.shane_tm_news .news_list ul li .details{
 	width: 100%;
 	float: left;
-	padding: 30px 40px 25px 40px;
-	background-color: #fff;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
+	padding-right: 15px;
+	padding-top: 32px;
 }
-.tokyo_tm_news ul li .list_inner:hover .details{
-	box-shadow: 0px 0px 20px rgba(0,0,0,.12);
-}
-.tokyo_tm_news ul li .details .title{
-	margin-bottom: 10px;
-	line-height: 1.4;
-}
-.tokyo_tm_news ul li .details .title a{
+.shane_tm_news .news_list ul li .details .title{margin-bottom: 10px;}
+.shane_tm_news .news_list ul li .details .title a{
 	text-decoration: none;
 	color: #000;
 	font-size: 18px;
@@ -1056,16 +1331,15 @@ h6 { font-size: 16px; }
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-.tokyo_tm_news ul li .details .title a:hover{
-	color: #000;
-}
-.tokyo_tm_news ul li .details .date{
-	font-family: "Montserrat";
-	font-size: 13px;
+.shane_tm_news .news_list ul li .details .title a:hover{color: #000;}
+.shane_tm_news .news_list ul li .details .date{
+	text-transform: uppercase;
+	font-family: "Poppins";
+	font-size: 12px;
 	color: #767676;
 	font-style: italic;
 }
-.tokyo_tm_news ul li .details .date a{
+.shane_tm_news .news_list ul li .details .date a{
 	text-decoration: none;
 	color: #767676;
 	
@@ -1075,185 +1349,32 @@ h6 { font-size: 16px; }
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-.tokyo_tm_news ul li .details .date a:hover{
-	color: #000;
-}
-.tokyo_tm_news ul li .details .date span{
-	position: relative;	
-}
-.tokyo_tm_news ul li .details .date span:before{
+.shane_tm_news .news_list ul li .details .date a:hover{color: #000;}
+.shane_tm_news .news_list ul li .details .date span{
 	position: relative;
-	content: "/";
-	font-size: 10px;
-	padding: 0px 7px 0px 2px;
+	margin-left: 11px;
 }
-.tokyo_tm_news ul li .extra{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 25px;
-	position: relative;
-}
-.tokyo_tm_news ul li .extra:before{
+.shane_tm_news .news_list ul li .details .date span:before{
 	position: absolute;
 	content: "";
-	width: 100%;
-	height: 1px;
-	background-color: rgba(0,0,0,.1);
-	bottom: -7px;
+	margin-top: 1px;
+	top: 50%;
+	transform: translateY(-50%) rotate(15deg);
+	right: 100%;
+	background-color: #939393;
+	width: 1px;
+	height: 9px;
+	margin-right: 7px;
 }
-.tokyo_tm_news ul li .my_like a{
-	text-decoration: none;
-	color: #767676;
-	font-size: 13px;
-}
-.tokyo_tm_news ul li .my_like .svg{
-	width: 13px;
-	height: 13px;
-	position: relative;
-	top: 1px;
-	transform: rotate(2deg);
-}
-.tokyo_tm_news ul li .my_like span{
-	display: inline-block;
-	padding-left: 5px;
-	font-style: italic;
-}
-.tokyo_tm_read_more{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	position: relative;
-	overflow: hidden;
-}
-.tokyo_tm_read_more a{
-	text-decoration: none;
-	display: inline-block;
-	overflow: hidden;
-    color: #000;
-	padding-right: 32px;
-    position: relative;
-	text-transform: uppercase;
-    font-weight: 500;
-	font-size: 12px;
-	font-family: "Montserrat";
-}
-.tokyo_tm_read_more a:before{
+.shane_tm_news .description{
+	opacity: 0;
+	visibility: hidden;
 	position: absolute;
-	content: '';
-    background-color: #000;
-    margin: auto;
-	width: 100%;
-	height: 1px;
-	top: 0px;
-    left: 0px;
-	bottom: 0px;
-    transform: scaleX(.2);
-    transform-origin: left center;
-	animation: read-more-anim;
-    animation-fill-mode: forwards;
-    animation-duration: .4s;
-    animation-timing-function: cubic-bezier(.6, .01, 0, 1);
-}
-.tokyo_tm_read_more a span{
-	display: inline-block;
-    position: relative;
-	background-color: #fff;
-	z-index: 1; 
-    transition: .6s cubic-bezier(.6, .01, 0, 1);
-	transform: translateX(-110%);
-}
-.tokyo_tm_news ul li .list_inner:hover .tokyo_tm_read_more a:before{
-	animation: read-more-anim-2;
-	animation-fill-mode: forwards;
-	animation-duration: .4s;
-	animation-timing-function: cubic-bezier(.6,.01,0,1);
-}
-.tokyo_tm_news ul li .list_inner:hover .tokyo_tm_read_more a span{
-	transform: translateX(0%);
-}
-
-@keyframes read-more-anim{
-    0% {
-        transform-origin: right center;
-        transform: scaleX(.2);
-    }
-    70% {
-        transform-origin: right center;
-    }
-    71% {
-        transform-origin: left center;
-        transform: scaleX(1);
-    }
-
-    100% {
-        transform-origin: left center;
-        transform: scaleX(.2);
-    }
-}
-
-@keyframes read-more-anim-2{
-    0% {
-        transform-origin: left center;
-        transform: scaleX(.2);
-    }
-    70% {
-        transform-origin: left center;
-        transform: scaleX(1);
-    }
-    71% {
-        transform-origin: right center;
-    }
-    100% {
-        transform-origin: right center;
-        transform: scaleX(.2);
-    }
-}
-
-.tokyo_tm_modalbox_news .details .extra{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	position: relative;
-	margin-bottom: 30px;
-}
-.tokyo_tm_modalbox_news .details .extra:before{
-	position: absolute;
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: rgba(0,0,0,.1);
-    bottom: -10px;
-}
-.tokyo_tm_modalbox_news .details .extra .my_like a{
-	text-decoration: none;
-	color: #767676;
-}
-.tokyo_tm_modalbox_news .details .extra .my_like .svg{
-	width: 14px;
-	height: 14px;
-	position: relative;
-	top: 2px;
-	transform: rotate(2deg);
-}
-.tokyo_tm_modalbox_news .details .extra .my_like span{
-	display: inline-block;
-	padding-left: 5px;
-	font-style: italic;
-}
-.tokyo_tm_modalbox_news .tokyo_tm_read_more{
+	z-index: -11;
 	display: none;
 }
-.tokyo_tm_full_link{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	z-index: 4;
-}
-.tokyo_tm_modalbox_news{
+body.modal{overflow: hidden;}
+.shane_tm_modalbox_news{
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -1270,18 +1391,16 @@ h6 { font-size: 16px; }
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-.tokyo_tm_modalbox_news.opened{
+.shane_tm_modalbox_news.opened{
 	opacity: 1;
 	visibility: visible;
 }
-.tokyo_tm_modalbox_news .container{
-	height: 100vh;
-}
-.tokyo_tm_modalbox_news .box_inner{
+.shane_tm_modalbox_news .container{height: 100vh;}
+.shane_tm_modalbox_news .box_inner{
 	position: absolute;
 	top: 70px;
 	bottom: 70px;
-	width: 968px;
+	width: 1200px;
 	left: 50%;
 	transform: translateX(-50%);
 	background-color: #fff;
@@ -1297,49 +1416,79 @@ h6 { font-size: 16px; }
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-.tokyo_tm_modalbox_news.opened .box_inner{
+.shane_tm_modalbox_news.opened .box_inner{
 	opacity: 1;
 	visibility: visible;
 	margin-top: 0px;
 }
-.tokyo_tm_modalbox_news .close{
+.shane_tm_modalbox_news .box_inner:before{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 50px;
+	background-color: #fff;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+}
+.shane_tm_modalbox_news .box_inner:after{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 50px;
+	background-color: #fff;
+	bottom: 0px;
+	left: 0px;
+	z-index: 2;
+}
+.shane_tm_modalbox_news .close{
 	position: fixed;
 	left: 100%;
 	top: 0px;
 	margin-left: 40px;
-	z-index: 111111;
+	z-index: 20;
 }
-.tokyo_tm_modalbox_news .close a{
+.shane_tm_modalbox_news .close a{
 	text-decoration: none;
 	color: #fff;
 }
-.tokyo_tm_modalbox_news .close .svg{
+.shane_tm_modalbox_news .close .svg{
 	width: 50px;
 	height: 50px;
 }
-.tokyo_tm_modalbox_news .description_wrap{
+.shane_tm_modalbox_news .description_wrap{
 	position: relative;
 	width: 100%;
 	height: 100%;
 	float: left;
 	overflow: hidden;
-	padding: 70px;
+	padding: 50px;
 }
-.tokyo_tm_modalbox_news .details{
+.shane_tm_modalbox_news .details{
 	width: 100%;
 	float: left;
-	margin-bottom: 20px;
+	margin-bottom: 27px;
 }
-.tokyo_tm_modalbox_news .description_wrap .image{
+.shane_tm_modalbox_news .description{
+	width: 100%;
+	float: left;
+}
+.shane_tm_modalbox_news .description p{margin-bottom: 15px;}
+.shane_tm_modalbox_news .description blockquote{
+	font-style: italic;
+	color: #000;
+	border-left: 2px solid #000;
+	padding-left: 20px;
+	margin-bottom: 15px;
+}
+.shane_tm_modalbox_news .description_wrap .image{
 	position: relative;
-	max-height: 100vh;
+	max-height: 450px;
 	z-index: -1;
-	margin-bottom: 40px;
+	margin-bottom: 36px;
 }
-.tokyo_tm_modalbox_news .description_wrap .image img{
-	min-width: 100%;
-}
-.tokyo_tm_modalbox_news .description_wrap .image .main{
+.shane_tm_modalbox_news .description_wrap .image img{min-width: 100%;}
+.shane_tm_modalbox_news .description_wrap .image .main{
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
@@ -1349,36 +1498,33 @@ h6 { font-size: 16px; }
 	background-position: center;
 	background-size: cover;
 }
-.tokyo_tm_modalbox_news .details .title{
+.shane_tm_modalbox_news .details .title{
 	font-weight: 600;
-	font-size: 23px;
-	margin-bottom: 9px;
+	margin-bottom: 8px;
 }
-.tokyo_tm_modalbox_news .date{
+.shane_tm_modalbox_news .date{
 	text-transform: uppercase;
-    font-family: "Montserrat";
+    font-family: "Poppins";
     font-size: 12px;
     color: #767676;
     font-style: italic;
 }
-.tokyo_tm_modalbox_news .date a{
+.shane_tm_modalbox_news .date a{
 	text-decoration: none;
     color: #767676;
 	
     -webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
 }
-.tokyo_tm_modalbox_news .date a:hover{
-	color: #000;
-}
-.tokyo_tm_modalbox_news .date span{
+.shane_tm_modalbox_news .date a:hover{color: #e54b4b;}
+.shane_tm_modalbox_news .date span{
 	position: relative;
     margin-left: 11px;
 }
-.tokyo_tm_modalbox_news .date span:before{
+.shane_tm_modalbox_news .date span:before{
 	position: absolute;
     content: "";
     margin-top: 0px;
@@ -1390,89 +1536,84 @@ h6 { font-size: 16px; }
     height: 9px;
     margin-right: 7px;
 }
-.tokyo_tm_news .main_content{
-	opacity: 0;
-	visibility: hidden;
-	position: absolute;
-	z-index: -11;
-	display: none;
-}
-body.modal{
-	overflow-y: hidden;
-}
-.tokyo_tm_modalbox_news .main_content{
-	width: 100%;
-	float: left;
-}
-.tokyo_tm_modalbox_news .main_content .descriptions{
-	width: 100%;
-	float: left;
-	margin-bottom: 15px;
-}
-.tokyo_tm_modalbox_news .main_content .descriptions .bigger{
-	color: #888;
-	font-size: 20px;		
-	margin-bottom: 31px;
-}
-.tokyo_tm_modalbox_news .main_content .descriptions p{
-	margin-bottom: 22px;
-}
-.tokyo_tm_modalbox_news .main_content .quotebox{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	position: relative;
-	padding-left: 70px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.tokyo_tm_modalbox_news .main_content .quotebox p{
-	font-size: 20px;
-	font-style: italic;
-	margin-bottom: 23px;
-}
-.tokyo_tm_modalbox_news .main_content .icon{
-	position: absolute;
-	left: 0px;
-	top: 10px;
-}
-.tokyo_tm_modalbox_news .main_content .icon .svg{
-	width: 40px;
-	height: 40px;
-	color: #000;
-}
-.tokyo_tm_modalbox_news .news_share{
+.shane_tm_modalbox_news .share{
 	width: 100%;
 	height: auto;
 	clear: both;
 	display: flex;
 	align-items: center;
+	padding-top: 14px;
 }
-.tokyo_tm_modalbox_news .news_share span{
-	font-family: "Montserrat";
-	font-weight: 600;
-	font-style: italic;
-	padding-right: 20px;
+.shane_tm_modalbox_news .share span{
+	font-family: "Poppins";
 	color: #000;
+	font-weight: 600;
+	display: inline-block;
+	padding-right: 20px;
 }
-.tokyo_tm_modalbox_news .news_share ul{
+.shane_tm_modalbox_news .share ul{
 	margin: 0px;
 	list-style-type: none;
-	position: relative;
-	top: -2px;
 }
-.tokyo_tm_modalbox_news .news_share ul li{
-	margin: 0px 12px 0px 0px;
+.shane_tm_modalbox_news .share ul li{
+	margin: 0px 15px 0px 0px;
 	display: inline-block;
-}  
-.tokyo_tm_modalbox_news .news_share ul li .svg{
-	width: 15px;
-	height: 15px;
 }
-.tokyo_tm_modalbox_news .news_share ul li a{
+.shane_tm_modalbox_news .share ul li:last-child{margin-right: 0px;}
+.shane_tm_modalbox_news .share ul li a{
 	text-decoration: none;
 	color: #000;
+}
+.shane_tm_full_link{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 4;
+}
+
+/*---------------------------------------------------*/
+/*	12) SHANE TALK
+/*---------------------------------------------------*/
+
+.shane_tm_talk{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 220px 0px 170px 0px;
+	position: relative;
+}
+.shane_tm_talk .talk_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	z-index: 3;
+	overflow: hidden;
+}
+.shane_tm_talk .text{
+	margin-bottom: 35px;
+	text-align: center;
+}
+.shane_tm_talk .text h3{
+	color: #fff;
+	font-weight: 800;
+	font-size:72px; 
+}
+.shane_tm_talk .button a{
+	text-decoration: none;
+	color: #000;
+	background-color: #fff;
+	display: inline-block;
+	padding: 13px 48px;
+	border: 2px solid #fff;
+	font-family: "Poppins";
 	
 	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
@@ -1480,98 +1621,319 @@ body.modal{
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-
-/*---------------------------------------------------*/
-/*	09) TOKYO CONTACT
-/*---------------------------------------------------*/
-
-.tokyo_tm_contact{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	padding: 100px 0px 100px 0px;
+.shane_tm_talk .button a:hover{
+	color: #fff;
+	background-color: transparent;
 }
-.tokyo_tm_contact .map_wrap{
+.shane_tm_talk .background{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.shane_tm_talk .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+	background-color: rgba(0,0,0,.7);
+}
+
+.shane_tm_talk .shape{
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	top: -13px;
+	z-index: 2;
+	transform: rotate(180deg);
+}
+.shane_tm_talk .shape .svg{
+	width: 100%;
+	height: 100%;
+}
+
+/*---------------------------------------------------*/
+/*	13) SHANE COPYRIGHT
+/*---------------------------------------------------*/
+
+.shane_tm_copyright{
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
+	background-color: #000;
+	padding: 90px 0px;
+}
+.shane_tm_copyright .inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	text-align: center;
+}
+.shane_tm_copyright p{
+	font-family: "Poppins";
+	color: #fff;
+}
+.shane_tm_copyright a{
+	text-decoration: none;
+	color: #fff;
+}
+
+/*---------------------------------------------------*/
+/*	14) SHANE MODALBOX CONTACT
+/*---------------------------------------------------*/
+
+.shane_tm_mobalbox_contact{
+	position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100vh;
+    z-index: 15;
+    background-color: rgba(0,0,0,.8);
+    opacity: 0;
+    visibility: hidden;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.shane_tm_mobalbox_contact.opened{
+	opacity: 1;
+	visibility: visible;
+}
+.shane_tm_mobalbox_contact .box_inner{
+	position: absolute;
+    top: 70px;
+    bottom: 70px;
+    width: 1200px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -20px;
+    transition-delay: .3s;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.shane_tm_mobalbox_contact.opened .box_inner{
+	opacity: 1;
+	visibility: visible;
+	margin-top: 0px;
+}
+.shane_tm_mobalbox_contact .box_inner:before{
+	position: absolute;
+    content: "";
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
+.shane_tm_mobalbox_contact .box_inner:after{
+	position: absolute;
+    content: "";
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    bottom: 0px;
+    left: 0px;
+    z-index: 2;
+}
+.shane_tm_mobalbox_contact .close{
+	position: fixed;
+    left: 100%;
+    top: 0px;
+    margin-left: 40px;
+    z-index: 20;
+}
+.shane_tm_mobalbox_contact .close a{
+	text-decoration: none;
+    color: #fff;
+}
+.shane_tm_mobalbox_contact .close .svg{
+	width: 50px;
+    height: 50px;
+}
+.shane_tm_mobalbox_contact .description_wrap{
+	position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    padding: 50px;
+}
+.shane_tm_mobalbox_contact .title h3{font-weight: 800;}
+.shane_tm_mobalbox_contact .wrapper{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	padding-top: 31px;
 	margin-bottom: 50px;
 }
-.tokyo_tm_contact .map_wrap .map{
-  min-height: 400px;
-  width: 100%;
-  filter: grayscale(1);
+.shane_tm_mobalbox_contact .desc{
+	max-width: 50%;
+	float: left;
+	padding-top: 95px;
 }
-.tokyo_tm_contact .fields{
+.shane_tm_mobalbox_contact .left{
+	width: 50%;
+	padding-right: 25px;
+}
+.shane_tm_mobalbox_contact .fields{
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
 }
-.tokyo_tm_contact .fields .first{
+.shane_tm_mobalbox_contact .fields .first{
 	width: 100%;
 	float: left;
 }
-.tokyo_tm_contact .fields ul{
+.shane_tm_mobalbox_contact .fields ul{
 	margin: 0px;
 	list-style-type: none;
 }
-.tokyo_tm_contact .fields ul li{
+.shane_tm_mobalbox_contact .fields ul li{
 	width: 100%;
 	margin: 0px 0px 30px 0px;
 	float: left;
 }
-.tokyo_tm_contact .fields ul li input{
+.shane_tm_mobalbox_contact .fields ul li input{
 	width: 100%;
 	border: 1px solid rgba(0,0,0,.2);
-	background-color: transparent;
-	font-style: italic;
+	background-color: #fff;
 }
-.tokyo_tm_contact .fields ul li input:focus{
+.shane_tm_mobalbox_contact .fields ul li input:focus{
 	outline: none;
 	border: 1px solid rgba(0,0,0,.5);
 }
-.tokyo_tm_contact .fields .last textarea{
+.shane_tm_mobalbox_contact .fields .last textarea{
 	width: 100%;
 	border: 1px solid rgba(0,0,0,.2);
-	height: 150px;
+	height: 120px;
 	resize: none;
 	margin-bottom: 20px;
-	background-color: transparent;
-	font-style: italic;
+	background-color: #fff;
 }
-.tokyo_tm_contact .fields .last textarea:focus{
+.shane_tm_mobalbox_contact .fields .last textarea:focus{
 	outline: none;
 	border: 1px solid rgba(0,0,0,.5);
 } 
-.tokyo_tm_contact .empty_notice{
+.shane_tm_mobalbox_contact .empty_notice{
 	color: #F52225;
 	margin-bottom: 7px;
 	display: none;
 	text-align: left;
 	font-weight: 500;
 }
-.tokyo_tm_contact .contact_error{
+.shane_tm_mobalbox_contact .contact_error{
 	color: #F52225;
 	text-align: left;
 	font-weight: 500;
 }
-.tokyo_tm_contact .returnmessage{
+.shane_tm_mobalbox_contact .returnmessage{
 	color:#3A00FF;
 	margin-bottom: 7px;
 	text-align: left;
 	font-weight: 500;
 }
-
-/*---------------------------------------------------*/
-/*	10) TOKYO MAGIC CURSOR
-/*---------------------------------------------------*/
-
-.tokyo_tm_all_wrap[data-magic-cursor="hide"] .mouse-cursor{
-	display: none;
+.shane_tm_mobalbox_contact .right{
+	width: 50%;
+	padding-left: 25px;
+	position: relative;
+	top:6px;
 }
+.shane_tm_mobalbox_contact .map_wrap .map {
+  min-height: 359px;
+  width: 100%;
+}
+.shane_tm_mobalbox_contact .short_info{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.shane_tm_mobalbox_contact .short_info > ul{
+	margin: 0px 0px 0px -50px;
+	list-style-type: none;
+}
+.shane_tm_mobalbox_contact .short_info > ul > li{
+	margin: 0px 0px 50px 0px;
+	float: left;
+	width: 33.3333%;
+	padding-left: 50px;
+	text-align: center;
+}
+.shane_tm_mobalbox_contact .short_info > ul > li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	background-color: #000;
+	padding: 50px 20px;
+}
+.shane_tm_mobalbox_contact .short_info > ul > li p{
+	font-family: "Poppins";
+	font-weight: 500;
+	color: #fff;
+}
+.shane_tm_mobalbox_contact .short_info > ul > li a{
+	text-decoration: none;
+	color: #fff;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.shane_tm_mobalbox_contact .short_info > ul > li a:hover{color: #fff;}
+.shane_tm_mobalbox_contact .short_info > ul > li .svg{
+	width: 30px;
+	height: 30px;
+	margin-bottom: 12px;
+	color: #fff;
+}
+.shane_tm_mobalbox_contact .social{
+	margin: 0px;
+	list-style-type: none;
+	position: relative;
+	top: 11px;
+}
+.shane_tm_mobalbox_contact .social li{
+	margin: 0px 15px 0px 0px;
+	display: inline-block;
+}
+.shane_tm_mobalbox_contact .social li:last-child{margin-right: 0px;}
+.shane_tm_mobalbox_contact .social li a{
+	text-decoration: none;
+	color: #fff;
+}
+.shane_tm_mobalbox_contact .social li .svg{
+	width: 15px !important;
+	height: 15px !important; 
+}
+
+/*---------------------------------------------------*/
+/*	15) SHANE CURSOR
+/*---------------------------------------------------*/
+
 .mouse-cursor{
   position: fixed;
   left: 0;
@@ -1587,7 +1949,7 @@ body.modal{
   margin-top: -3px;
   width: 6px;
   height: 6px;
-  z-index: 50;
+  z-index: 100;
   background-color: #000;
   -webkit-transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
   transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
@@ -1608,187 +1970,28 @@ body.modal{
   border: 2px solid #000;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  z-index: 50;
+  z-index: 100;
   opacity: .5;
   -webkit-transition: all .08s ease-out;
   transition: all .08s ease-out;
 }
 .cursor-outer.cursor-hover{opacity: 0;}
-
-/*---------------------------------------------------*/
-/*	 TOKYO INTRO
-/*---------------------------------------------------*/
-
-.tokyo_tm_intro .short_info{
-	position: fixed;
-	top: 10%;
-	width: 100%;
-	text-align: center;
-}
-.tokyo_tm_intro .short_info img{
-	margin-bottom: 25px;
-}
-.tokyo_tm_intro .short_info h3{
-	font-size: 20px;
-	color: #767676;
-}
-.tokyo_tm_intro{
-	width: 100%;
-	height: 100vh;
-	clear: both;
-	float: left;
-	position: relative;
-}
-.tokyo_tm_intro .demos{
-	width: 100%;
-	height: 100%;
-	clear: both;
-	display: flex;
-	align-items: center;
-	text-align: center;
-	position: relative;
-}
-.tokyo_tm_intro .left,
-.tokyo_tm_intro .right{
-	width: 50%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-}
-.tokyo_tm_intro .demos img{
-	max-width: 400px;
-	margin-bottom: 25px;
-}
-.tokyo_tm_intro .desc{
-	position: relative;
-	top: 0px;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.tokyo_tm_intro .desc h3{
-	font-size: 20px;
-	font-weight: 800;
-}
-.tokyo_tm_intro .intro_line,
-.tokyo_tm_intro .intro_line_2,
-.tokyo_tm_intro .intro_line_3{
-	position: fixed;
-	top: 0px;
-	width: 1px;
-	height: 200%;
-	left: 50%;
-	transform: translateY(-50%);
-	z-index: -1;
-	background-color: rgba(0,0,0,.06);
-}
-.tokyo_tm_intro .intro_line{
-	left: 25%;
-}
-.tokyo_tm_intro .intro_line_2{
-	left: 50%;
-	transform: translateY(-50%);
-}
-.tokyo_tm_intro .intro_line_3{
-	left: 75%;
-}
-.tokyo_tm_intro .intro_link{
+.shane_tm_all_wrap[data-magic-cursor="hide"] .mouse-cursor{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
 	position: absolute;
-	z-index: 2;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-}
-.tokyo_tm_intro .left:hover .desc{top: -20px;}
-.tokyo_tm_intro .right:hover .desc{top: -20px;}
-.tokyo_tm_intro_fixed_price .pricing-info,
-.tokyo_tm_intro_fixed_price .anim {text-decoration: none;
-	color: #fff;
-    font-family: "Montserrat";
-    background-color: #e54b4b;
-    position: fixed;
-    font-size: 22px;
-    text-align: center;
-    z-index: 3;
-    border-radius: 100%;
-    height: 70px;
-    width: 70px;
-    line-height: 70px;
-	display: inline-block;
-	left: 50%;
-	bottom: 10%;
-	margin-left: -35px;
-	font-weight: 600;
-		
-	-webkit-transition: all 0.2s;
-	   -moz-transition: all 0.2s;
-	    -ms-transition: all 0.2s;
-	     -o-transition: all 0.2s;
-	        transition: all 0.2s;	
-		
-}
-
-@-webkit-keyframes myAnim {
-    0% {
-        -webkit-transform: scale(.1);
-        transform: scale(.1);
-        opacity: 0
-    }
-    50% {
-        opacity: .3
-    }
-    100% {
-        -webkit-transform: scale(2);
-        transform: scale(2);
-        opacity: 0
-    }
-}
-
-@keyframes myAnim {
-    0% {
-        -webkit-transform: scale(.1);
-        transform: scale(.1);
-        opacity: 0
-    }
-    50% {
-        opacity: .3
-    }
-    100% {
-        -webkit-transform: scale(2);
-        transform: scale(2);
-        opacity: 0
-    }
-}
-
-.tokyo_tm_intro_fixed_price .anim:nth-child(1) {
-    -webkit-animation: myAnim 2s infinite;
-    animation: myAnim 2s infinite
-}
-
-.tokyo_tm_intro_fixed_price .anim:nth-child(2) {
-    -webkit-animation: myAnim 2s infinite .3s;
-    animation: myAnim 2s infinite .3s
-}
-
-.tokyo_tm_intro_fixed_price .anim:nth-child(3) {
-    -webkit-animation: myAnim 2s infinite .6s;
-    animation: myAnim 2s infinite .6s
+	z-index: -1111;
 }
 
 /*---------------------------------------------------*/
-/*  WAXON SETTINGS
+/*  SHANE SETTINGS
 /*---------------------------------------------------*/
 
-.tokyo_tm_settings{
+.shane_tm_settings{
 	position: fixed;
-	z-index: 10;
-	top: 10%;
+	z-index: 200;
+	top: 15%;
 	right: -200px;
 	width: 200px;
 	background-color: rgba(0,0,0,1.00);
@@ -1800,29 +2003,29 @@ body.modal{
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-.tokyo_tm_settings.opened{
+.shane_tm_settings.opened{
 	right: 0px;
 }
-.tokyo_tm_settings .wrapper{
+.shane_tm_settings .wrapper{
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
 }
-.tokyo_tm_settings .icon{
+.shane_tm_settings .icon{
 	position: absolute;
 	top: 0px;
 	right: 100%;
 	background-color: #000;
 	padding: 12px 12px 4px 12px;
 }
-.tokyo_tm_settings .icon .svg{
+.shane_tm_settings .icon .svg{
 	color: #fff;
 	width: 25px;
 	height: 25px;
 	animation: fa-spin 2s infinite linear;
 }
-.tokyo_tm_settings .link{
+.shane_tm_settings .link{
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
@@ -1851,14 +2054,14 @@ body.modal{
         transform: rotate(359deg);
     }
 }
-.tokyo_tm_settings .title{
+.shane_tm_settings .title{
 	color: #fff;
 	font-family: "Montserrat";
 	font-weight: 600;
 	position: relative;
 	display: inline-block;
 }
-.tokyo_tm_settings .title:before{
+.shane_tm_settings .title:before{
 	position: absolute;
 	content: "";
 	width: 100%;
@@ -1867,113 +2070,111 @@ body.modal{
 	left: 0px;
 	bottom: 0px;
 }
-.tokyo_tm_settings .colors, .tokyo_tm_settings .tk-theme-color{
+.shane_tm_settings .colors{
 	margin: 0px 0px 22px 0px;
 	list-style-type: none;
 	padding-top: 32px;
 }
-.tokyo_tm_settings .colors li, .tokyo_tm_settings .tk-theme-color li{
+.shane_tm_settings .colors li{
 	margin: 0px;
 	display: inline-block;
 }
-.tokyo_tm_settings .colors li a, .tokyo_tm_settings .tk-theme-color li a{
+.shane_tm_settings .colors li a{
 	text-decoration: none;
 	display: inline-block;
 	width: 30px;
 	height: 30px;
 	border-radius: 100%;
 }
-.tokyo_tm_settings .direction{
+.shane_tm_settings .direction{
 	list-style-type: none;
 	margin:  0px;
 }
-.tokyo_tm_settings .direction li{
+.shane_tm_settings .direction li{
 	margin: 0px 20px 0px 0px;
 	display: inline-block;
 }
-.tokyo_tm_settings .direction li a{
+.shane_tm_settings .direction li a{
 	opacity: .4;
 	text-decoration: none;
 	color: #fff; 
 }
-.tokyo_tm_settings .direction li a.active{
+.shane_tm_settings .direction li a.active{
 	opacity: 1;
 }
-.tokyo_tm_settings .direction li .svg{
+.shane_tm_settings .direction li .svg{
 	width: 25px;
 	height: 25px;
 }
-.tokyo_tm_settings .colors li.bl,.tokyo_tm_settings .tk-theme-color li.bl{
+.shane_tm_settings .colors li.bl{
 	display: inline-block;
 }
-.tokyo_tm_settings .colors li.wh, .tokyo_tm_settings .tk-theme-color li.wh{
+.shane_tm_settings .colors li.wh{
 	display: none;
 }
-body.dark .tokyo_tm_settings .colors li.bl,
-.tokyo_tm_settings.changed .colors li.bl, body.dark .tokyo_tm_settings .tk-theme-color li.bl,
-.tokyo_tm_settings.changed .tk-theme-color li.bl{
+body.dark .shane_tm_settings .colors li.bl,
+.shane_tm_settings.changed .colors li.bl{
 	display: none;
 }
-body.dark .tokyo_tm_settings .colors li.wh,
-.tokyo_tm_settings.changed .colors li.wh, body.dark .tokyo_tm_settings .tk-theme-color li.wh,
-.tokyo_tm_settings.changed .tk-theme-color li.wh{
+body.dark .shane_tm_settings .colors li.wh,
+.shane_tm_settings.changed .colors li.wh{
 	display: inline-block;
 }
-body.dark .tokyo_tm_settings,
-.tokyo_tm_settings.changed{
+body.dark .shane_tm_settings,
+.shane_tm_settings.changed{
 	background-color: #fff;
 }
-body.dark .tokyo_tm_settings .icon,
-.tokyo_tm_settings.changed .icon{
+body.dark .shane_tm_settings .icon,
+.shane_tm_settings.changed .icon{
 	background-color: #fff;
 }
-body.dark .tokyo_tm_settings .icon .svg,
-.tokyo_tm_settings.changed .icon .svg{
+body.dark .shane_tm_settings .icon .svg,
+.shane_tm_settings.changed .icon .svg{
 	color: #000;
 }
-body.dark .tokyo_tm_settings .title,
-.tokyo_tm_settings.changed .title{
+body.dark .shane_tm_settings .title,
+.shane_tm_settings.changed .title{
 	color: #000;
 }
-body.dark .tokyo_tm_settings .title:before,
-.tokyo_tm_settings.changed .title:before{
+body.dark .shane_tm_settings .title:before,
+.shane_tm_settings.changed .title:before{
 	background-color: rgba(0,0,0,.5);
 }
-body.dark .tokyo_tm_settings .direction li a,
-.tokyo_tm_settings.changed .direction li a{
+body.dark .shane_tm_settings .direction li a,
+.shane_tm_settings.changed .direction li a{
 	color: #000;
 }
-body.dark .tokyo_tm_settings .cursor li:nth-child(1) a,
-.tokyo_tm_settings.changed .cursor li:nth-child(1) a{
+body.dark .shane_tm_settings .cursor li:nth-child(1) a,
+.shane_tm_settings.changed .cursor li:nth-child(1) a{
 	border-color: #000;
 }
-body.dark .tokyo_tm_settings .cursor li:nth-child(1) a:before,
-.tokyo_tm_settings.changed .cursor li:nth-child(1) a:before{
+body.dark .shane_tm_settings .cursor li:nth-child(1) a:before,
+.shane_tm_settings.changed .cursor li:nth-child(1) a:before{
 	background-color: #000;
 }
-body.dark .tokyo_tm_settings .cursor li .svg,
-.tokyo_tm_settings.changed .cursor li .svg{
+body.dark .shane_tm_settings .cursor li .svg,
+.shane_tm_settings.changed .cursor li .svg{
 	color: #000;
 }
-.tokyo_tm_settings .cursor{
+.shane_tm_settings .cursor{
 	margin: 0px;
 	list-style-type: none;
 	padding-top: 15px;
 }
-.tokyo_tm_settings .cursor li{
+.shane_tm_settings .cursor li{
 	margin: 0px 20px 0px 0px;
 	display: inline-block;
 }
-.tokyo_tm_settings .cursor li a{
+.shane_tm_settings .cursor li a{
 	text-decoration: none;
 	color: #fff;
 	opacity: .4;
 	font-weight: 600;
 }
-.tokyo_tm_settings .cursor li a.showme{
+.shane_tm_settings .cursor li a.showme{
 	opacity: 1;
 }
-.tokyo_tm_settings .cursor li:nth-child(1) a{
+.shane_tm_settings .cursor li:nth-child(1) a{
 	width: 30px;
 	height: 30px;
 	border-radius: 100%;
@@ -1981,7 +2182,7 @@ body.dark .tokyo_tm_settings .cursor li .svg,
 	position: relative;
 	display: inline-block;
 }
-.tokyo_tm_settings .cursor li:nth-child(1) a:before{
+.shane_tm_settings .cursor li:nth-child(1) a:before{
 	position: absolute;
 	content: "";
 	width: 4px;
@@ -1992,22 +2193,22 @@ body.dark .tokyo_tm_settings .cursor li .svg,
 	left: 50%;
 	top: 50%;
 }
-.tokyo_tm_settings .cursor li .svg{
+.shane_tm_settings .cursor li .svg{
 	width: 25px;
 	height: 25px;
 	color: #fff;
 }
-.tokyo_tm_settings .cursor li:nth-child(2){
+.shane_tm_settings .cursor li:nth-child(2){
 	position: relative;
 	top: -2px;
 }
-.tokyo_tm_settings .effect{
+.shane_tm_settings .effect{
 	margin: 0px;
 	list-style-type: none;
 	padding-top: 15px;
 	padding-bottom: 25px;
 }
-.tokyo_tm_settings .effect li{
+.shane_tm_settings .effect li{
 	margin: 0px 0px 5px 0px;
 	display: inline-block;
 	width: 30px;
@@ -2018,7 +2219,7 @@ body.dark .tokyo_tm_settings .cursor li .svg,
 	background-color: #fff;
 	opacity: .4;
 }
-.tokyo_tm_settings .effect li a{
+.shane_tm_settings .effect li a{
 	text-decoration: none;
 	color: #000;
 	font-size: 13px;
@@ -2028,69 +2229,222 @@ body.dark .tokyo_tm_settings .cursor li .svg,
 	position: relative;
 	top: 2px;
 }
-.tokyo_tm_settings .effect li.selected{
+.shane_tm_settings .effect li.selected{
 	background-color: #fff;
 	opacity: 1;
 }
 
 /*---------------------------------------------------*/
-/*	11) TOKYO MEDIA QUERIES (FOR SMALL DEVIVES)
+/*	SHANE INTRO
+/*---------------------------------------------------*/
+
+.shane_tm_intro{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.shane_tm_intro .hero{
+	width: 100%;
+	height: 80vh;
+	float: left;
+	position: relative;
+}
+.shane_tm_intro .hero:before{
+	position: absolute;
+    content: "";
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;  
+    background-image: url(..//img/patterns/inspiration-geometry.png);
+    background-repeat: repeat;
+    opacity: 1; 
+	z-index: 2;
+}
+.shane_tm_intro .hero:after{
+	position: absolute;
+    content: "";
+    top: 0px;
+   	bottom: 0px;
+   	left: 0px;
+   	right: 0px;
+   	background-color: #000;
+   	z-index: 1;
+}
+.shane_tm_intro .hero .content{
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.shane_tm_intro .hero h3{
+	color: #fff;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 35px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.shane_tm_intro .hero p{
+	font-family: "Poppins";
+	font-weight: 500;
+	color: #fff;
+	font-size: 20px;
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+.purchase_button a{
+	text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    display: inline-block;
+    padding: 13px 48px;
+    border: 2px solid #fff;
+    font-family: "Poppins";
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.purchase_button a:hover{
+	background-color: transparent;
+	color: #fff;
+}
+.shane_tm_intro .intro_title{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	text-align: center;
+	padding: 100px 0px 100px 0px;
+}
+.shane_tm_intro .intro_title h3{
+	font-weight: 800;
+	font-size: 40px;
+}
+.shane_tm_intro .demo_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 100px;
+}
+.shane_tm_intro .demo_list .inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.shane_tm_intro .demo_list ul{
+	margin: 0px 0px 0px -50px;
+	list-style-type: none;
+}
+.shane_tm_intro .demo_list ul li{
+	margin: 0px 0px 20px 0px;
+	float: left;
+	width: 50%;
+	padding-left: 50px;
+}
+.shane_tm_intro .demo_list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	text-align: center;
+	transition: all .3s ease;
+	top: 0px;
+}
+.shane_tm_intro .demo_list ul li .list_inner img{
+	box-shadow: 0px 0px 30px rgba(0,0,0,.2);
+}
+.shane_tm_intro .demo_list ul li .list_inner:hover{
+	top: -10px;
+}
+.shane_tm_intro .demo_list ul li .list_inner h3{
+	font-size: 20px;
+	font-weight: 600;
+	padding: 20px 0px;
+	
+}
+
+/*---------------------------------------------------*/
+/*	16) SHANE MEDIA QUERIES (FOR SMALL DEVIVES)
 /*---------------------------------------------------*/
 
 @media (max-width: 1600px) {
-	.tokyo_tm_all_wrap .leftpart{width: 400px;}
-	.tokyo_tm_section{padding-left: 400px;}
-	.tokyo_tm_all_wrap .rightpart{padding-left: 400px;}
+	.shane_tm_modalbox_news .box_inner{width: 1070px;}
+	.shane_tm_mobalbox_contact .box_inner{width: 1070px;}
+}
+@media (max-width: 1400px) {
+	.shane_tm_modalbox_news .box_inner{width: 900px;}
+	.shane_tm_mobalbox_contact .box_inner{width: 900px;}
 }
 @media (max-width: 1200px) {
-	.tokyo_tm_mobile_menu{display: block;}
-	.tokyo_tm_section{padding-left: 0px;}
-	.tokyo_tm_all_wrap .leftpart{display: none;}
-	.tokyo_tm_all_wrap .rightpart{padding-left: 0px;}
-	.tokyo_tm_all_wrap .rightpart_in{border-left: none;}
-	.tokyo_tm_about{padding-top: 170px;}
-	.tokyo_tm_portfolio{padding-top: 170px;}
-	.tokyo_tm_contact{padding-top: 170px;}
-	.tokyo_tm_news{padding-top: 170px;}
-	.tokyo_tm_modalbox_news .box_inner{width: 100%;top: 0px;bottom: 0px;}
-	.tokyo_tm_modalbox_news .close a{color: #000;}
-	.tokyo_tm_modalbox_news .close{left: auto;right: 5px;top: 25px;}
-	.tokyo_tm_modalbox_news .close .svg{width: 25px;height: 25px;}
-	.tokyo_tm_modalbox_about .box_inner{width: 100%;top: 0px;bottom: 0px;}
-	.tokyo_tm_modalbox_about .close a{color: #000;}
-	.tokyo_tm_modalbox_about .close{left: auto;right: 5px;top: 25px;}
-	.tokyo_tm_modalbox_about .close .svg{width: 25px;height: 25px;}
+	.shane_tm_modalbox_news .box_inner{width: 100%;}
+	.shane_tm_modalbox_news .box_inner{top: 0px;bottom: 0px;}
+	.shane_tm_modalbox_news .close{position: absolute;top: 20px;left: auto;right: 20px;margin-left: 0px;}
+	.shane_tm_modalbox_news .close .svg{color: #777;width: 25px;height: 25px;}
+	.shane_tm_mobalbox_contact .box_inner{width: 100%;}
+	.shane_tm_mobalbox_contact .box_inner{top: 0px;bottom: 0px;}
+	.shane_tm_mobalbox_contact .close{position: absolute;top: 20px;left: auto;right: 20px;margin-left: 0px;}
+	.shane_tm_mobalbox_contact .close .svg{color: #777;width: 25px;height: 25px;}
 }
 @media (max-width: 1040px) {
-	.mouse-cursor{display: none;}
-	.tokyo_tm_mobile_menu .menu_inner{padding: 20px;}
-	.tokyo_tm_home .home_content{flex-direction: column;text-align: center;}
-	.tokyo_tm_home .avatar{margin-bottom: 30px;}
-	.tokyo_tm_home .details{margin-left: 0px;}
-	.tokyo_tm_about .description_inner{flex-direction: column;}
-	.tokyo_tm_about .description .left{width: 100%;padding: 0px;margin-bottom: 50px;}
-	.tokyo_tm_about .description .right{width: 100%;padding: 0px;}
-	.tokyo_tm_title .title_flex{flex-direction: column;align-items: flex-start;}
-	.tokyo_tm_title .portfolio_filter{padding-top: 48px;}
-	.tokyo_tm_modalbox_news .description_wrap{padding: 40px;}
-	.tokyo_tm_modalbox_about .description_wrap{padding: 40px;}
-	.tokyo_tm_modalbox_about .my_box{flex-direction: column;}
-	.tokyo_tm_modalbox_about .my_box .left{width: 100%;padding-right: 0px;margin-bottom: 50px;}
-	.tokyo_tm_modalbox_about .my_box .right{width: 100%;padding-left: 0px;}
-	.container{padding: 0px 20px;}
-	
-	.tokyo_tm_intro .demos img{max-width: 100px;}
+	.shane_tm_topbar{display: none;}
+	.shane_tm_mobile_menu{display: block;}
+	.shane_tm_portfolio_titles{display: none;}
+	.shane_tm_portfolio .mobile_title{display: block;}
+	.shane_tm_hero .content h3{font-size: 50px;}
+	.shane_tm_about .about_inner{flex-direction: column;}
+	.shane_tm_about .left{padding-right: 0px;width: 100%;margin-bottom: 50px;}
+	.shane_tm_about .right{padding-left: 0px;width: 100%;}
+	.shane_tm_portfolio .portfolio_list ul li{width: 50%;}
+	.shane_tm_title .title_flex{flex-direction: column;align-items: flex-start;}
+	.shane_tm_title .portfolio_filter{padding-top: 78px;}
+	.shane_tm_portfolio .portfolio_list{padding-top: 40px;}
+	.shane_tm_skills .skills_inner{flex-direction: column;}
+	.shane_tm_skills .left{padding-right: 0px;width: 100%;margin-bottom: 20px;}
+	.shane_tm_skills .right{padding-left: 0px;width: 100%;}
+	.shane_tm_testimonials .testimonials_inner{flex-direction: column;}
+	.shane_tm_testimonials .left{padding-right: 0px;width: 100%;margin-bottom: 50px;}
+	.shane_tm_testimonials .right{padding-left: 0px;width: 100%;}
+	.shane_tm_news .news_list ul li{width: 50%;}
+	.shane_tm_talk .text h3{font-size: 50px;}
+	.shane_tm_modalbox_news .description_wrap{padding: 50px 20px;}
+	.shane_tm_mobalbox_contact .description_wrap{padding: 50px 20px;}
+	.shane_tm_mobalbox_contact .wrapper{flex-direction: column;}
+	.shane_tm_mobalbox_contact .left{width: 100%;padding-right: 0px;margin-bottom: 50px;}
+	.shane_tm_mobalbox_contact .right{width: 100%;padding-left: 0px;}
+	.shane_tm_mobalbox_contact .short_info ul{margin: 0px;}
+	.shane_tm_mobalbox_contact .short_info ul li{width: 100%;padding-left: 0px;}
+	.shane_tm_portfolio .portfolio_list ul li {
+		height: auto;
+	}
 }
 @media (max-width: 768px) {
-	.tokyo_tm_home .details .name{font-size: 40px;}
-	.tokyo_tm_home .avatar{min-width: 200px;min-height: 200px;}
-	.tokyo_tm_portfolio .portfolio_list{margin: 0px;}
-	.tokyo_tm_portfolio .portfolio_list li{width: 100%;padding-left: 0px;}
-	.tokyo_tm_news ul{margin: 0px;}
-	.tokyo_tm_news ul li{width: 100%;padding-left: 0px;}
-	.tokyo_tm_modalbox_news .main_content .icon{position: relative;margin-bottom: 30px;}
-	.tokyo_tm_modalbox_news .main_content .quotebox{padding-left: 0px;}
-	.tokyo_tm_modalbox_about .counter ul{margin: 0px;}
-	.tokyo_tm_modalbox_about .counter ul li{width: 100%;padding-left: 0px;}
+	.shane_tm_hero .content{padding-right: 0px;width: 100%;}
+	.shane_tm_portfolio .portfolio_list ul{margin: 0px;}
+	.shane_tm_portfolio .portfolio_list ul li{padding: 0px;width: 100%;}
+	.shane_tm_news .news_list ul{margin: 0px;}
+	.shane_tm_news .news_list ul li{padding: 0px;width: 100%;}
+	
+	.shane_tm_intro .demo_list ul{margin: 0px;}
+	.shane_tm_intro .demo_list ul li{width: 100%;padding-left: 0px;}
+	
 }
 
+body.intro #preloader:before,
+body.intro #preloader:after{
+	background-color: #fff;
+}
+body.intro .loader_line:before{
+	background-color: #000;
+}
+body.intro .loader_line:after{
+	background-color: #A8A8A8;
+}
